@@ -1,0 +1,98 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#bodyDiv {
+    width: 1200px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+div.banner {
+    width: 100px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+div.buildDetails {
+    text-align: right;
+    font: italic 8pt Georgia;
+    padding-bottom: 20px;
+}
+
+div.testDetails {
+    border-radius: 15px;
+    border: solid 3pt #f1f1ff;
+    background-color:#fafaff;
+    padding: 20px;
+}
+
+div.groupDiv {
+    padding: 0px 0px 20px 0px;
+}
+
+div.groupName{
+    padding-bottom: 10px;
+}
+
+div.packDiv {
+    padding: 0px 0px 20px 0px;
+}
+
+div.packName{
+    width:98%;
+    margin-left:auto;
+    font: 10pt Verdana, Geneva, sans-serif;
+    padding-bottom: 10px;
+}
+
+#testDetailsTable {
+    border-collapse:collapse;
+    font: 8pt Verdana, Geneva, sans-serif;
+    width: 96%;
+    margin-right:0px;
+    margin-left:auto;
+}
+
+#testDetailsTable td {
+    padding: 7px 15px 7px;
+}
+
+img.icon {
+    width: 24px;
+}
+
+#testDetailsTable td.iconCol {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 24px;
+}
+
+#testDetailsTable td.idCol{
+    width: 5%;
+}
+
+#testDetailsTable td.nameCol {
+    width: 14%;
+}
+
+#testDetailsTable td.methodNameCol {
+    font-family: "Courier New", Courier, monospace;
+    width: 10%;
+}
+
+td.descCol pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+#testDetailsTable tr:nth-child(even) {
+    background-color:#f1f1ff;
+}
+
+#testDetailsTable tr:nth-child(odd) {
+    background-color:#fafaff;
+}
