@@ -4,7 +4,7 @@ import org.junit.Test
 import org.junit.Before
 
 /**
- * User: Daniel Date: 23.09.12 Time: 21:45
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 21:45
  */
 class AcceptanceTestPackGroupUnitTest {
     AcceptanceTestPackGroup group

@@ -6,7 +6,7 @@ import groovy.xml.MarkupBuilder
 import org.junit.After
 
 /**
- * User: Daniel Date: 23.09.12 Time: 21:45
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 21:45
  */
 class AcceptanceTestSuiteUnitTest {
     AcceptanceTestSuite suite

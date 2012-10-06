@@ -12,7 +12,7 @@ import javax.lang.model.element.ExecutableElement
 import org.accept4j.testpack.AcceptanceTestSuite
 
 /**
- * User: Daniel Date: 23.09.12 Time: 18:18
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 18:18
  */
 class AnnotationVisitorUnitTest {
     AnnotationVisitor visitor
