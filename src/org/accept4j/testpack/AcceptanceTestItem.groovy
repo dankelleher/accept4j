@@ -1,7 +1,7 @@
 package org.accept4j.testpack
 
 /**
- * User: Daniel Date: 23.09.12 Time: 21:18
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 21:18
  */
 class AcceptanceTestItem {
     String id

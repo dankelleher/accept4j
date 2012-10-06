@@ -4,7 +4,7 @@ import groovy.xml.MarkupBuilder
 import groovy.util.logging.Log4j
 
 /**
- * User: Daniel Date: 23.09.12 Time: 21:34
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 21:34
  */
 @Log4j
 class AcceptanceTestSuite {

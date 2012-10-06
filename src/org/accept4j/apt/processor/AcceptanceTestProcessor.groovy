@@ -11,6 +11,7 @@ import javax.xml.transform.TransformerFactory
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 import org.accept4j.testpack.AcceptanceTestSuite
+import org.accept4j.specification.SpecGeneratorFactory
 
 @SupportedAnnotationTypes("org.accept4j.annotation.AcceptanceTest")
 @SupportedSourceVersion(SourceVersion.RELEASE_6)
@@ -26,10 +27,15 @@ class AcceptanceTestProcessor extends AbstractProcessor {
 
     @Override
     boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+        generateSpec()
         generateXML(annotations, roundEnv)
         convertToHTML()
 
         return true;
+    }
+
+    protected void generateSpec() {
+        new SpecGeneratorFactory().generator.generate()
     }
 
     protected void generateXML(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {

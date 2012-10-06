@@ -23,7 +23,7 @@ import groovy.xml.MarkupBuilder
 import org.junit.After
 
 /**
- * User: Daniel Date: 23.09.12 Time: 18:17
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 18:17
  */
 class AcceptanceTestProcessorIntegrationTest {
 
@@ -93,7 +93,7 @@ class AcceptanceTestProcessorIntegrationTest {
             spec.suite {
                 group(name: "dummy group") {
                     pack(name: "dummy pack") {
-                        test(id: "1.1", name: "TestMethod")
+                        test(id: "1.1", name: "test method")
                     }
                 }
             }
@@ -103,12 +103,21 @@ class AcceptanceTestProcessorIntegrationTest {
 
         def html = new File("${AcceptanceTestProcessor.PATH}/test.html").text
         assert html =~ /1.1/
-        assert html =~ /TestMethod/
+        assert html =~ /test method/
+    }
+    
+    @Test void testSpecGeneratedFromExcel() {
+        new File("spec.xls") << new File("testData/spec.xls").bytes
+        processor.generateSpec()
+
+        def suite = new XmlSlurper().parse new File("spec.xml")
+        assert suite.group.pack.test.'@name'[0] == "TestMethod"
     }
     
     @After void tearDown() {
         new File("${AcceptanceTestProcessor.PATH}/resources").deleteDir()
         new File(AcceptanceTestProcessor.PATH).deleteDir()
         new File("spec.xml").delete()
+        new File("spec.xls").delete()
     }
 }

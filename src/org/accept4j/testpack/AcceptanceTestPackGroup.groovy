@@ -1,7 +1,7 @@
 package org.accept4j.testpack
 
 /**
- * User: Daniel Date: 23.09.12 Time: 21:17
+ * Copyright: Daniel Kelleher Date: 23.09.12 Time: 21:17
  */
 class AcceptanceTestPackGroup {
     String name
