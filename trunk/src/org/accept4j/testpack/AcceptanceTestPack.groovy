@@ -11,6 +11,8 @@ class AcceptanceTestPack {
         tests.add(test)
     }
     
+    public void leftShift(AcceptanceTestItem test) { add(test) }
+    
     public AcceptanceTestItem find(String id) {
         return tests.find { it.id == id }
     }
@@ -19,5 +21,9 @@ class AcceptanceTestPack {
         builder.pack(name:name) {
             tests.each { it.toXML(builder)}
         }
+    }
+
+    private AcceptanceTestItem findTestById(testId) {
+        tests.find { it.id == testId }
     }
 }

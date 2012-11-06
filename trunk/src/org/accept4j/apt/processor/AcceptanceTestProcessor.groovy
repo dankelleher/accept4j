@@ -12,6 +12,7 @@ import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 import org.accept4j.testpack.AcceptanceTestSuite
 import org.accept4j.specification.SpecGeneratorFactory
+import org.accept4j.specification.generator.SpecGenerator
 
 @SupportedAnnotationTypes("org.accept4j.annotation.AcceptanceTest")
 @SupportedSourceVersion(SourceVersion.RELEASE_6)
@@ -20,6 +21,8 @@ class AcceptanceTestProcessor extends AbstractProcessor {
     static AnnotationVisitor visitor = new AnnotationVisitor()
 
     static final String PATH = "accept4j"
+
+    private SpecGenerator specGenerator
 
     AcceptanceTestProcessor() {
         explodeJarResources()
@@ -30,12 +33,18 @@ class AcceptanceTestProcessor extends AbstractProcessor {
         generateSpec()
         generateXML(annotations, roundEnv)
         convertToHTML()
+        postProcess()
 
         return true;
     }
 
+    void postProcess() {
+        specGenerator.postProcess()
+    }
+
     protected void generateSpec() {
-        new SpecGeneratorFactory().generator.generate()
+        specGenerator = new SpecGeneratorFactory().generator
+        specGenerator.generate()
     }
 
     protected void generateXML(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {

@@ -63,15 +63,33 @@ class AcceptanceTestSuite {
     }
 
     private createOrUpdateTestDetails(group, pack, test) {
-        def implementedPack = findOrCreate(group.@name.text()).findOrCreate(pack.@name.text())
-        AcceptanceTestItem implementedTest = implementedPack.find(test.@id.text())
+        def testId = test.@id.text()
+        def groupName = group.@name.text()
+        def packName = pack.@name.text()
+        def implementedTest = findImplementedTest(groupName, packName, testId)
 
         if (implementedTest) {
             implementedTest.addSpecDetails(test)
         } else {
-            implementedTest = new AcceptanceTestItem(id: test.@id.text())
+            def implementedPack = findOrCreate(groupName).findOrCreate(packName)
+
+            implementedTest = new AcceptanceTestItem(id: testId)
             implementedTest.addSpecDetails(test)
             implementedPack.add(implementedTest)
         }
+    }
+
+    private AcceptanceTestItem findImplementedTest(groupName, packName, testId) {
+        if ((groupName == "") && (packName == "")) {
+            // just search by test id
+            return findTestById(testId)
+        } else {
+            def implementedPack = findOrCreate(groupName).findOrCreate(packName)
+            return implementedPack.find(testId)
+        }
+    }
+
+    private AcceptanceTestItem findTestById(testId) {
+        groups.findResult  { it.findTestById(testId) }
     }
 }

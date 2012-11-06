@@ -26,4 +26,8 @@ class AcceptanceTestPackGroup {
             testPacks.each { it.toXML(builder)}
         }
     }
+
+    private AcceptanceTestItem findTestById(testId) {
+        testPacks.findResult  { it.findTestById(testId) }
+    }
 }

@@ -50,6 +50,20 @@ class AcceptanceTestSuiteUnitTest {
         assert missingTest.id == "1.2"
         assert missingTest.name == "Some Other Test"
     }
+    
+    @Test void testSearchForTestIfSpecContainsNoPackOrGroup() {
+        makeSparseSpecXML()
+
+        def existingTest = [
+                id: "1.1",
+                methodName: "TestMethod"
+        ] as AcceptanceTestItem
+
+        AcceptanceTestSuite suite = makeSuite(existingTest)
+
+        suite.compareToSpec()
+        assert existingTest.name
+    }
 
     private makeSpecXML() {
         new File("spec.xml").withWriter { writer ->
@@ -62,6 +76,21 @@ class AcceptanceTestSuiteUnitTest {
                         }
                         test(id: "1.2", name: "Some Other Test") {
                             description("Some other test to test some other thing")
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private makeSparseSpecXML() {
+        new File("spec.xml").withWriter { writer ->
+            def spec = new MarkupBuilder(writer)
+            spec.suite(name: "") {
+                group(name: "") {
+                    pack(name: "") {
+                        test(id: "1.1", name: "Test 1") {
+                            description("A test to test a thing")
                         }
                     }
                 }

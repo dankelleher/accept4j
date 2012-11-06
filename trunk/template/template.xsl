@@ -36,7 +36,7 @@
     <xsl:template match="pack">
         <div class="packDiv">
             <div class="packName"><xsl:value-of select="@name"/></div>
-            <table id="testDetailsTable">
+            <table class="testDetailsTable">
                 <xsl:apply-templates/>
             </table>
         </div>
