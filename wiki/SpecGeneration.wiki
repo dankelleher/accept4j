@@ -1,0 +1,20 @@
+#summary Instructions on how to generate your specifications or list of test cases
+
+= Introduction =
+
+Accept4j takes a set of specifications, or test cases, from the business, and produces a report indicating which have been implemented in the code base. Specifications can come from a number of sources:
+
+  * Excel spreadsheet
+  * Directory structure
+  * [http://www.atlassian.com/software/jira/overview/ Atlassian JIRA] issue tracking software
+  * XML file
+
+See below for details on creating specs using each of these methods.
+
+= Excel =
+
+= Directory structure =
+
+= JIRA =
+
+= XML =
