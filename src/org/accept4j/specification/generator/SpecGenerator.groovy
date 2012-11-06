@@ -5,4 +5,5 @@ package org.accept4j.specification.generator
  */
 public interface SpecGenerator {
     void generate()
+    void postProcess()
 }

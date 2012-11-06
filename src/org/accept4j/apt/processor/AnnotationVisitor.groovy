@@ -12,7 +12,7 @@ import org.accept4j.testpack.AcceptanceTestItem
         def annotation = e.getAnnotation(org.accept4j.annotation.AcceptanceTest.class)
 
         TestPack testPack = e.enclosingElement.getAnnotation(TestPack.class)
-        String testPackName = testPack.name() ?: e.enclosingElement.qualifiedName
+        String testPackName = testPack.name() ?: e.enclosingElement.simpleName
         String group = testPack.group()
 
         suite.findOrCreate(group).findOrCreate(testPackName).add(new AcceptanceTestItem(id : annotation.id(), methodName: e.simpleName))

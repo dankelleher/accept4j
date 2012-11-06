@@ -1,0 +1,23 @@
+<suite name='Warehouse'>
+  <group name='Booking'>
+    <pack name='When making an order'>
+      <test id='1.1' name='the client should be billed' methodName=''>
+        <description/>
+      </test>
+      <test id='1.2' name='the stock should be reduced' methodName=''>
+        <description/>
+      </test>
+      <test id='1.3' name='the order is rejected if the stock is unavailable' methodName=''>
+        <description>If the customer requests more stock than we have in store, reject the order</description>
+      </test>
+    </pack>
+    <pack name='When cancelling an order'>
+      <test id='2.1' name='the client should be refunded if the order is not yet filled' methodName=''>
+        <description></description>
+      </test>
+      <test id='2.2' name='the cancellation should be declined if the order is filled' methodName=''>
+        <description>If the order has already been filled, we cannot cancel it</description>
+      </test>
+    </pack>
+  </group>
+</suite>

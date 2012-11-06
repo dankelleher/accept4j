@@ -9,13 +9,20 @@ import org.accept4j.apt.processor.AcceptanceTestProcessor
 /**
  * Copyright: Daniel Kelleher Date: 01.10.12 Time: 21:02
  */
-class ExcelSpecGenerator implements SpecGenerator {
+class ExcelSpecGenerator implements SpecGenerator{
+    public static final String FILE = "spec.xls"
+
     @Override
     void generate() {
-        ExcelSpecAdapter spec = new ExcelSpecAdapter("spec.xls")
+        ExcelSpecAdapter spec = new ExcelSpecAdapter(FILE)
         AcceptanceTestSuite suite = spec.suite
 
         def xmlFile = new File("spec.xml")
         xmlFile.withWriter() { it << suite.toXML() }
+    }
+
+    @Override
+    void postProcess() {
+        new DeleteXMLPostProcessor().postProcess()
     }
 }

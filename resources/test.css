@@ -89,10 +89,10 @@ td.descCol pre {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-#testDetailsTable tr:nth-child(even) {
+.testDetailsTable tr:nth-child(even) {
     background-color:#f1f1ff;
 }
 
-#testDetailsTable tr:nth-child(odd) {
+.testDetailsTable tr:nth-child(odd) {
     background-color:#fafaff;
 }
