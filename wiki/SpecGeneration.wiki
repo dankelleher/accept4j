@@ -19,7 +19,7 @@ The tests should either be in a sheet called `spec` or the first sheet in the wo
 
 =Directory structure=
 
-Create a directory called ´spec´ in your [SpecGeneration#Working_Directory working directory]. The directories inside it will define your test structure. Use the template:
+Create a directory called `spec` in your [SpecGeneration#Working_Directory working directory]. The directories inside it will define your test structure. Use the template:
 
 {{{
 "spec" => test suite name => group name => test pack name => test file
