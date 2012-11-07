@@ -13,7 +13,7 @@ See below for details on creating specs using each of these methods.
 
 =Excel=
 
-Include an excel file called ´spec.xml´ in the [SpecGeneration#Working_Directory] working directory, following the template:  [http://code.google.com/p/accept4j/source/browse/trunk/testData/functional/excelspec/spec.xls this example]
+Include an excel file called ´spec.xml´ in the [SpecGeneration#Working_Directory working directory], following [http://code.google.com/p/accept4j/source/browse/trunk/testData/functional/excelspec/spec.xls this template].
 
 =Directory structure=
 
