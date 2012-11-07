@@ -1,6 +1,6 @@
 #summary Instructions on how to generate your specifications or list of test cases
 
-= Introduction =
+=Introduction=
 
 Accept4j takes a set of specifications, or test cases, from the business, and produces a report indicating which have been implemented in the code base. Specifications can come from a number of sources:
 
@@ -11,10 +11,18 @@ Accept4j takes a set of specifications, or test cases, from the business, and pr
 
 See below for details on creating specs using each of these methods.
 
-= Excel =
+=Excel=
 
-= Directory structure =
+Include an excel file called ´spec.xml´ in the [SpecGeneration#Working_Directory] working directory, following the template:  [http://code.google.com/p/accept4j/source/browse/trunk/testData/functional/excelspec/spec.xls this example]
 
-= JIRA =
+=Directory structure=
 
-= XML =
+=JIRA=
+
+=XML=
+
+=Notes=
+
+===Working Directory===
+
+The _working directory_ is whatever directory you run the java compiler from. 
