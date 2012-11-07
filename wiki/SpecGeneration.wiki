@@ -13,9 +13,27 @@ See below for details on creating specs using each of these methods.
 
 =Excel=
 
-Include an excel file called ´spec.xml´ in the [SpecGeneration#Working_Directory working directory], following [http://code.google.com/p/accept4j/source/browse/trunk/testData/functional/excelspec/spec.xls this template].
+Include an excel file called ´spec.xls´ in the [SpecGeneration#Working_Directory working directory], following [http://accept4j.googlecode.com/svn/trunk/testData/functional/excelspec/spec.xls this template].
+
+The tests should either be in a sheet called ´spec´ or the first sheet in the workbook.
 
 =Directory structure=
+
+Create a directory called ´spec´ in your [SpecGeneration#Working_Directory working directory]. The directories inside it will define your test structure. Use the template:
+
+{{{
+"spec" => test suite name => group name => test pack name => test file
+}}}
+
+http://accept4j.googlecode.com/svn/wiki/directoryStructure.png
+
+The files in the test pack folders should be named:
+
+_Test ID_`_`_Test Name_._extension_
+
+for example: `1.1_the client should be billed.docx`
+
+[http://code.google.com/p/accept4j/source/browse/#svn%2Ftrunk%2FtestData%2Ffunctional%2Fdirspec%2Fspec See this example]
 
 =JIRA=
 
