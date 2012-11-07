@@ -13,9 +13,9 @@ See below for details on creating specs using each of these methods.
 
 =Excel=
 
-Include an excel file called ´spec.xls´ in the [SpecGeneration#Working_Directory working directory], following [http://accept4j.googlecode.com/svn/trunk/testData/functional/excelspec/spec.xls this template].
+Include an excel file called `spec.xls` in the [SpecGeneration#Working_Directory working directory], following [http://accept4j.googlecode.com/svn/trunk/testData/functional/excelspec/spec.xls this template].
 
-The tests should either be in a sheet called ´spec´ or the first sheet in the workbook.
+The tests should either be in a sheet called `spec` or the first sheet in the workbook.
 
 =Directory structure=
 
