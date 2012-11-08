@@ -22,7 +22,7 @@ The tests should either be in a sheet called `spec` or the first sheet in the wo
 Create a directory called `spec` in your [SpecGeneration#Working_Directory working directory]. The directories inside it will define your test structure. Use the template:
 
 {{{
-"spec" => test suite name => group name => test pack name => test file
+spec/<test suite name>/<group name>/<test pack name>/<test file>
 }}}
 
 http://accept4j.googlecode.com/svn/wiki/directoryStructure.png
@@ -35,7 +35,14 @@ for example: `1.1_the client should be billed.docx`
 
 [http://code.google.com/p/accept4j/source/browse/#svn%2Ftrunk%2FtestData%2Ffunctional%2Fdirspec%2Fspec See this example]
 
+The spec files are not read by accept4j, so can be whatever format or file type you like. It is currently not possible to include test descriptions in the report using a directory structure spec.
+
 =JIRA=
+
+_Note: JIRA integration is currently experimental and does not provide all the fuctionality of the other spec options. Group and test pack naming is not yet supported._
+
+  # Include a copy of [http://accept4j.googlecode.com/svn/trunk/testData/functional/jiraspec/jira.config jira.config] in your [SpecGeneration#Working_Directory working directory].
+  # Edit jira.config with the URL of own JIRA installation, and a username and password (note: encrypted passwords is not supported, so use a generic, read-only JIRA account here)
 
 =XML=
 
