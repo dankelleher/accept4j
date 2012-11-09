@@ -39,10 +39,14 @@ The spec files are not read by accept4j, so can be whatever format or file type 
 
 =JIRA=
 
-_Note: JIRA integration is currently experimental and does not provide all the fuctionality of the other spec options. Group and test pack naming is not yet supported._
+_JIRA integration is currently experimental and does not provide all the fuctionality of the other spec options. Group and test pack naming is not yet supported._
 
   # Include a copy of [http://accept4j.googlecode.com/svn/trunk/testData/functional/jiraspec/jira.config jira.config] in your [SpecGeneration#Working_Directory working directory].
-  # Edit jira.config with the URL of own JIRA installation, and a username and password (note: encrypted passwords is not supported, so use a generic, read-only JIRA account here)
+  # Edit jira.config with the URL of your own JIRA installation, and a username and password (note: encrypted passwords is not supported, so use a generic, read-only JIRA account here)
+  # Ensure the RPC plugin is enabled on your JIRA installation, by following instructions [https://developer.atlassian.com/display/JIRADEV/JIRA+XML-RPC+Overview#JIRAXML-RPCOverview-EnabletheRPCplugin here].
+  # Create an issue filter in JIRA that selects all the issues you wish to include in your spec. Put the [SpecGeneration#JIRA_filter_ID filter ID] 
+
+accept4j includes only subtask issue types in the spec. To ensure an issue is included, make sure it is set up as a subtask of a parent issue.
 
 =XML=
 
@@ -51,3 +55,17 @@ _Note: JIRA integration is currently experimental and does not provide all the f
 ===Working Directory===
 
 The _working directory_ is whatever directory you run the java compiler from. 
+
+===JIRA filter ID===
+
+Get the ID of the JIRA issues filter from the URL of the filter. 
+
+`https://jira.atlassian.com/issues/?filter=<filter ID>`
+
+Select the filter from the Issues menu.
+
+http://accept4j.googlecode.com/svn/wiki/filterSelection.png
+
+The URL of the resultant page will give you the filter ID.
+
+http://accept4j.googlecode.com/svn/wiki/filterURL.png
