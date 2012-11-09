@@ -44,7 +44,7 @@ _JIRA integration is currently experimental and does not provide all the fuction
   # Include a copy of [http://accept4j.googlecode.com/svn/trunk/testData/functional/jiraspec/jira.config jira.config] in your [SpecGeneration#Working_Directory working directory].
   # Edit jira.config with the URL of your own JIRA installation, and a username and password (note: encrypted passwords is not supported, so use a generic, read-only JIRA account here)
   # Ensure the RPC plugin is enabled on your JIRA installation, by following instructions [https://developer.atlassian.com/display/JIRADEV/JIRA+XML-RPC+Overview#JIRAXML-RPCOverview-EnabletheRPCplugin here].
-  # Create an issue filter in JIRA that selects all the issues you wish to include in your spec. Put the [SpecGeneration#JIRA_filter_ID filter ID] 
+  # Create an issue filter in JIRA that selects all the issues you wish to include in your spec. Put the [SpecGeneration#JIRA_filter_ID filter ID] in the `jira.config` file.
 
 accept4j includes only subtask issue types in the spec. To ensure an issue is included, make sure it is set up as a subtask of a parent issue.
 
