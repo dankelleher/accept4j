@@ -39,7 +39,9 @@ The spec files are not read by accept4j, so can be whatever format or file type 
 
 NOTE: To cut down compile time, accept4j will create a cache of the directory structure in a file called `spec.xml`. It will only look through the directory if that file does not exist. To ensure accept4j picks up the latest changes, delete this file before compilation. *Coming Soon:* A setting to disable caching.
 
-=[http://www.atlassian.com/software/jira/overview/ JIRA]=
+=JIRA=
+
+For projects that use [http://www.atlassian.com/software/jira/overview/ Atlassian JIRA], you can easily configure accept4j to automatically retrieve the spec from JIRA.
 
 _JIRA integration is currently experimental and does not provide all the fuctionality of the other spec options. Group and test pack naming is not yet supported._
 
