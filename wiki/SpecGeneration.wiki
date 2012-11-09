@@ -4,10 +4,10 @@
 
 Accept4j takes a set of specifications, or test cases, from the business, and produces a report indicating which have been implemented in the code base. Specifications can come from a number of sources:
 
-  * Excel spreadsheet
-  * Directory structure
-  * [http://www.atlassian.com/software/jira/overview/ Atlassian JIRA] issue tracking software
-  * XML file
+  * [SpecGeneration#Excel Excel spreadsheet]
+  * [SpecGeneration#Directory_structure Directory structure]
+  * [SpecGeneration#JIRA Atlassian JIRA issue tracking software]
+  * [SpecGeneration#XML XML file]
 
 See below for details on creating specs using each of these methods.
 
@@ -37,7 +37,9 @@ for example: `1.1_the client should be billed.docx`
 
 The spec files are not read by accept4j, so can be whatever format or file type you like. It is currently not possible to include test descriptions in the report using a directory structure spec.
 
-=JIRA=
+NOTE: To cut down compile time, accept4j will create a cache of the directory structure in a file called `spec.xml`. It will only look through the directory if that file does not exist. To ensure accept4j picks up the latest changes, delete this file before compilation. *Coming Soon:* A setting to disable caching.
+
+=[http://www.atlassian.com/software/jira/overview/ JIRA]=
 
 _JIRA integration is currently experimental and does not provide all the fuctionality of the other spec options. Group and test pack naming is not yet supported._
 
@@ -48,7 +50,11 @@ _JIRA integration is currently experimental and does not provide all the fuction
 
 accept4j includes only subtask issue types in the spec. To ensure an issue is included, make sure it is set up as a subtask of a parent issue.
 
+NOTE: To cut down compile time, accept4j will create a cache of the JIRA information in a file called `spec.xml`. It will only connect to JIRA if that file does not exist. To ensure accept4j picks up the latest changes from JIRA, delete this file before compilation. *Coming Soon:* A flag in `jira.config` to disable caching.
+
 =XML=
+
+Include an XML file called `spec.xml` in the [SpecGeneration#Working_Directory working directory], following [http://accept4j.googlecode.com/svn/trunk/testData/functional/xmlspec/spec.xml this template].
 
 =Notes=
 
