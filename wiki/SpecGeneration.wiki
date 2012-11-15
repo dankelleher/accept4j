@@ -9,13 +9,15 @@ Accept4j takes a set of specifications, or test cases, from the business, and pr
   * [SpecGeneration#JIRA Atlassian JIRA issue tracking software]
   * [SpecGeneration#XML XML file]
 
-See below for details on creating specs using each of these methods.
+----
 
 =Excel=
 
 Include an excel file called `spec.xls` in the [SpecGeneration#Working_Directory working directory], following [http://accept4j.googlecode.com/svn/trunk/testData/functional/excelspec/spec.xls this template].
 
 The tests should either be in a sheet called `spec` or the first sheet in the workbook.
+
+----
 
 =Directory structure=
 
@@ -39,6 +41,8 @@ The spec files are not read by accept4j, so can be whatever format or file type 
 
 NOTE: To cut down compile time, accept4j will create a cache of the directory structure in a file called `spec.xml`. It will only look through the directory if that file does not exist. To ensure accept4j picks up the latest changes, delete this file before compilation. *Coming Soon:* A setting to disable caching.
 
+----
+
 =JIRA=
 
 For projects that use [http://www.atlassian.com/software/jira/overview/ Atlassian JIRA], you can easily configure accept4j to automatically retrieve the spec from JIRA.
@@ -54,9 +58,13 @@ accept4j includes only subtask issue types in the spec. To ensure an issue is in
 
 NOTE: To cut down compile time, accept4j will create a cache of the JIRA information in a file called `spec.xml`. It will only connect to JIRA if that file does not exist. To ensure accept4j picks up the latest changes from JIRA, delete this file before compilation. *Coming Soon:* A flag in `jira.config` to disable caching.
 
+----
+
 =XML=
 
 Include an XML file called `spec.xml` in the [SpecGeneration#Working_Directory working directory], following [http://accept4j.googlecode.com/svn/trunk/testData/functional/xmlspec/spec.xml this template].
+
+----
 
 =Notes=
 
