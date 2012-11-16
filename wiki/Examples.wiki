@@ -14,3 +14,5 @@ If you don't want to use ant, just use javac, including the jars in the lib/ dir
 {{{
 javac -d out -classpath lib/accept4j.jar;lib/junit-4.10.jar src\org\exampleprog\test\*.java
 }}}
+
+The accept4j report will be generated in accept4j/test.html
