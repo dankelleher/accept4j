@@ -20,7 +20,7 @@ import org.accept4j.specification.generator.SpecGenerator
 class AcceptanceTestProcessor extends AbstractProcessor {
     static AnnotationVisitor visitor = new AnnotationVisitor()
 
-    static final String PATH = "accept4j"
+    static final String  PATH = "accept4j"
 
     private SpecGenerator specGenerator
 

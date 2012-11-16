@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="accept4j-all">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <root id="archive" name="accept4j-all.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="directory" name="services">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/services/javax.annotation.processing.Processor" />
+        </element>
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/conf" />
+      <element id="directory" name="resources">
+        <element id="dir-copy" path="$PROJECT_DIR$/resources" />
+      </element>
+      <element id="directory" name="template">
+        <element id="dir-copy" path="$PROJECT_DIR$/template" />
+      </element>
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/groovy-all-1.8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/groovy-xmlrpc-0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jxl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="module-output" name="Accept4J" />
+      <element id="library" level="project" name="lib" />
+      <element id="directory" name="src">
+        <element id="dir-copy" path="$PROJECT_DIR$/src" />
+      </element>
+    </root>
+  </artifact>
+</component>

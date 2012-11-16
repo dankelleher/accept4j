@@ -11,8 +11,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Accept4J$All_in_Accept4J.ic" NAME="All in Accept4J Coverage Results" MODIFIED="1348502124667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Accept4J$All_in_Accept4J.ic" NAME="All in Accept4J Coverage Results" MODIFIED="1352216907018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -61,56 +66,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExcelSpecGeneratorUnitTest.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/org/accept4j/specification/generator/ExcelSpecGeneratorUnitTest.groovy">
+      <file leaf-file-name="AntRunner.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/functional/runner/AntRunner.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="26" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
+            <state line="32" column="87" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AcceptanceTestProcessorIntegrationTest.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/org/accept4j/apt/processor/AcceptanceTestProcessorIntegrationTest.groovy">
+      <file leaf-file-name="FunctionalTestFixture.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/functional/FunctionalTestFixture.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="26" selection-start="4134" selection-end="4134" vertical-scroll-proportion="1.2619047">
+            <state line="90" column="54" selection-start="2907" selection-end="2907" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpecGeneratorFactoryUnitTest.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/org/accept4j/specification/SpecGeneratorFactoryUnitTest.groovy">
+      <file leaf-file-name="accept4j.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accept4j.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="34" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AcceptanceTestProcessor.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/accept4j/apt/processor/AcceptanceTestProcessor.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelSpecGenerator.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/generator/ExcelSpecGenerator.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="40" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpecGeneratorFactory.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/SpecGeneratorFactory.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="618" column="72" selection-start="36714" selection-end="36714" vertical-scroll-proportion="1.3156682">
+              <folding>
+                <element signature="tag#patternset#0;tag#project#0" expanded="false" />
+                <element signature="tag#patternset#2;tag#project#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,22 +111,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestItem.groovy" />
+        <option value="$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestSuiteUnitTest.groovy" />
         <option value="$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestPack.groovy" />
         <option value="$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestPackGroup.groovy" />
         <option value="$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestSuite.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/apt/processor/AnnotationVisitorUnitTest.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestPackGroupUnitTest.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestPackUnitTest.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestSuiteUnitTest.groovy" />
-        <option value="$PROJECT_DIR$/src/org/accept4j/specification/SpecGeneratorFactory.groovy" />
-        <option value="$PROJECT_DIR$/src/org/accept4j/specification/SpecParseException.groovy" />
-        <option value="$PROJECT_DIR$/src/org/accept4j/specification/generator/ExcelSpecAdapter.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/specification/SpecGeneratorFactoryUnitTest.groovy" />
+        <option value="$PROJECT_DIR$/src/org/accept4j/specification/generator/jira/xmlrpc/JiraWrapperXMLRPC.groovy" />
+        <option value="$PROJECT_DIR$/test/functional/FunctionalTest.groovy" />
         <option value="$PROJECT_DIR$/src/org/accept4j/apt/processor/AcceptanceTestProcessor.groovy" />
-        <option value="$PROJECT_DIR$/src/org/accept4j/specification/generator/ExcelSpecGenerator.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/specification/generator/ExcelSpecGeneratorUnitTest.groovy" />
-        <option value="$PROJECT_DIR$/test/org/accept4j/apt/processor/AcceptanceTestProcessorIntegrationTest.groovy" />
+        <option value="$PROJECT_DIR$/accept4j.properties" />
+        <option value="$PROJECT_DIR$/test/functional/runner/Runner.groovy" />
+        <option value="$PROJECT_DIR$/test/functional/runner/Accept4jRunner.groovy" />
+        <option value="$PROJECT_DIR$/test/functional/runner/JavacRunner.groovy" />
+        <option value="$PROJECT_DIR$/test/functional/FunctionalTestFixture.groovy" />
+        <option value="$PROJECT_DIR$/testData/functional/dirspec/build.xml" />
+        <option value="$PROJECT_DIR$/testData/functional/build.xml" />
+        <option value="$PROJECT_DIR$/test/functional/runner/AntRunner.groovy" />
+        <option value="$PROJECT_DIR$/accept4j.xml" />
       </list>
     </option>
   </component>
@@ -189,6 +170,10 @@
               <option name="myItemId" value="Accept4J" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -197,6 +182,96 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excelspec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dirspec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -221,8 +296,22 @@
               <option name="myItemId" value="accept4j" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testpack" />
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accept4J" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,15 +329,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
+              <option name="myItemId" value="functional" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specification" />
+              <option name="myItemId" value="runner" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,187 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accept4J" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accept4j" />
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,20 +367,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="accept4j" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
@@ -493,22 +405,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.accept4j.specification.generator.jira" />
+      <recent name="functional" />
       <recent name="org.accept4j.testpack" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniel\Desktop\workspace\Accept4J\testData\functional" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.accept4j.specification.generator.jira" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in Accept4J">
-    <configuration default="false" name="AnnotationVisitorUnitTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="JiraIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.accept4j.apt.processor.*" />
+          <option name="PATTERN" value="org.accept4j.specification.generator.jira.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Accept4J" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.accept4j.apt.processor" />
-      <option name="MAIN_CLASS_NAME" value="org.accept4j.apt.processor.AnnotationVisitorUnitTest" />
+      <option name="PACKAGE_NAME" value="org.accept4j.specification.generator.jira" />
+      <option name="MAIN_CLASS_NAME" value="org.accept4j.specification.generator.jira.JiraIntegrationTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -521,11 +441,17 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="AcceptanceTestPackGroupUnitTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="AcceptanceTestSuiteUnitTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="org.accept4j.testpack.*" />
@@ -536,7 +462,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="org.accept4j.testpack" />
-      <option name="MAIN_CLASS_NAME" value="org.accept4j.testpack.AcceptanceTestPackGroupUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="org.accept4j.testpack.AcceptanceTestSuiteUnitTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -549,7 +475,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -573,13 +505,69 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DirSpecFunctionalTest.testReportIsGeneratedOnJavacCompileWithSkinnyJar" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Accept4J" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="functional" />
+      <option name="MAIN_CLASS_NAME" value="functional.DirSpecFunctionalTest" />
+      <option name="METHOD_NAME" value="testReportIsGeneratedOnJavacCompileWithSkinnyJar" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DirSpecFunctionalTest.testReportIsGeneratedOnAntCompile" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Accept4J" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="functional" />
+      <option name="MAIN_CLASS_NAME" value="functional.DirSpecFunctionalTest" />
+      <option name="METHOD_NAME" value="testReportIsGeneratedOnAntCompile" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -689,10 +677,26 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.AnnotationVisitorUnitTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AcceptanceTestPackGroupUnitTest" />
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy Script">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="C:\Users\Daniel\Desktop\workspace\Accept4J" />
+      <setting name="debug" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.JiraIntegrationTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AcceptanceTestSuiteUnitTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All in Accept4J" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DirSpecFunctionalTest.testReportIsGeneratedOnJavacCompileWithSkinnyJar" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DirSpecFunctionalTest.testReportIsGeneratedOnAntCompile" />
     </list>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
@@ -709,6 +713,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -735,27 +742,47 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282967" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.64835167" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997253" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28846154" sideWeight="0.4980695" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38873628" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2815934" sideWeight="0.5032175" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554945" sideWeight="0.497426" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35164836" sideWeight="0.494852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17953669" sideWeight="0.39423078" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23359074" sideWeight="0.63873625" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36126372" sideWeight="0.497426" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996139" sideWeight="0.70604396" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17953669" sideWeight="0.64835167" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2815934" sideWeight="0.49227798" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -816,103 +843,102 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/accept4j.xml">
+      <antCommandLine value="" />
+      <runInBackground value="true" />
+      <targetFilters />
+      <treeView value="true" />
+      <verbose value="true" />
+      <viewClosedWhenNoErrors value="false" />
+      <expanded value="true" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestPackGroup.groovy">
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-all-1.9.5-rc1.jar!/org/mockito/asm/Opcodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" />
+        <state line="43" column="17" selection-start="2241" selection-end="2241" vertical-scroll-proportion="0.5334728" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/SpecParseException.groovy">
+    <entry file="file://$PROJECT_DIR$/test/functional/DirSpecFunctionalTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="325" selection-end="325" vertical-scroll-proportion="0.611236" />
+        <state line="5" column="6" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestItem.groovy">
+    <entry file="file://$PROJECT_DIR$/test/functional/runner/Accept4jRunner.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" />
+        <state line="5" column="17" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/testpack/AcceptanceTestSuite.groovy">
+    <entry file="jar://C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ant-1.8.2.jar!/org/apache/tools/ant/taskdefs/Javac.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" />
+        <state line="234" column="0" selection-start="10074" selection-end="10074" vertical-scroll-proportion="0.77483445" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestPackGroupUnitTest.groovy">
+    <entry file="jar://C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ant-1.8.2.jar!/org/apache/tools/ant/taskdefs/compilers/Javac13.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" />
+        <state line="11" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.37527594" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestPackUnitTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/generator/DirectorySpecGenerator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" />
+        <state line="28" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.034136545" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/accept4j/testpack/AcceptanceTestSuiteUnitTest.groovy">
+    <entry file="file://$PROJECT_DIR$/test/functional/runner/JavacRunner.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/accept4j/apt/processor/AnnotationVisitorUnitTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/SpecGeneratorFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jxl.jar!/jxl/Workbook.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="31" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.3559322">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/generator/ExcelSpecAdapter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="0.5078236">
-          <folding>
-            <element signature="e#46#65#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="20" column="5" selection-start="296" selection-end="632" vertical-scroll-proportion="0.6827309" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/accept4j/apt/processor/AcceptanceTestProcessor.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="0" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.034136545" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/accept4j/specification/generator/ExcelSpecGenerator.groovy">
+    <entry file="file://$PROJECT_DIR$/accept4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="40" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/accept4j/specification/generator/ExcelSpecGeneratorUnitTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="26" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="19" selection-start="134" selection-end="134" vertical-scroll-proportion="0.06827309" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/org/accept4j/specification/SpecGeneratorFactoryUnitTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
+        <state line="21" column="29" selection-start="522" selection-end="522" vertical-scroll-proportion="0.078313254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testData/functional/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="159" selection-end="159" vertical-scroll-proportion="0.09672831">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/accept4j/apt/processor/AcceptanceTestProcessorIntegrationTest.groovy">
+    <entry file="file://$PROJECT_DIR$/testData/functional/antTestBuild.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="26" selection-start="4134" selection-end="4134" vertical-scroll-proportion="1.2619047">
+        <state line="14" column="25" selection-start="403" selection-end="403" vertical-scroll-proportion="0.47791165">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/functional/runner/AntRunner.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="87" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/functional/FunctionalTestFixture.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="54" selection-start="2907" selection-end="2907" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accept4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="618" column="72" selection-start="36714" selection-end="36714" vertical-scroll-proportion="1.3156682">
+          <folding>
+            <element signature="tag#patternset#0;tag#project#0" expanded="false" />
+            <element signature="tag#patternset#2;tag#project#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -924,12 +950,12 @@
           <artifact-editor>
             <show-content>
               <type id="jpa-descriptors" />
+              <type id="artifact" />
               <type id="library" />
               <type id="javaee-facet-resources" />
-              <type id="artifact" />
             </show-content>
           </artifact-editor>
-          <last-edited>accept4j</last-edited>
+          <last-edited>examples</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -954,7 +980,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>grails-1.3.7</last-edited>
+          <last-edited>groovy-1.8.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

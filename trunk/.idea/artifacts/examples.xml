@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact name="examples">
+    <output-path>$PROJECT_DIR$/out/artifacts/examples</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true">
+        <file>file://$PROJECT_DIR$/accept4j.xml</file>
+        <target>zip.examples</target>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="xmlspec">
+        <element id="dir-copy" path="$PROJECT_DIR$/testData/functional/xmlspec" />
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="accept4j" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/junit-4.10.jar" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/testData/functional/build.xml" />
+      </element>
+      <element id="directory" name="excelspec">
+        <element id="dir-copy" path="$PROJECT_DIR$/testData/functional/excelspec" />
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="accept4j" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/junit-4.10.jar" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/testData/functional/build.xml" />
+      </element>
+      <element id="directory" name="jiraspec">
+        <element id="dir-copy" path="$PROJECT_DIR$/testData/functional/jiraspec" />
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="accept4j" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/junit-4.10.jar" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/testData/functional/build.xml" />
+      </element>
+      <element id="directory" name="dirspec">
+        <element id="dir-copy" path="$PROJECT_DIR$/testData/functional/dirspec" />
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="accept4j" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/junit-4.10.jar" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/testData/functional/build.xml" />
+      </element>
+    </root>
+  </artifact>
+</component>

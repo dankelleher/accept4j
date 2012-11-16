@@ -1,0 +1,15 @@
+<project name="sample ant build" default="build">
+    <path id="class.path">
+        <fileset dir="../../../lib">
+            <include name="*.jar"/>
+        </fileset>
+        <pathelement path="../../../out/artifacts/accept4j.jar"/>
+    </path>
+
+    <target name="build">
+        <javac srcdir="src"
+               destdir="out"
+               classpathref="class.path"/>
+    </target>
+</project>  
+  
