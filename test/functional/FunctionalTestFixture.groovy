@@ -4,26 +4,53 @@ import groovy.util.slurpersupport.GPathResult
 import org.junit.Test
 import org.junit.Before
 import org.junit.After
+import functional.runner.JavacRunner
+import functional.runner.Accept4jRunner
+import functional.runner.AntRunner
 
 /**
  * Copyright: Daniel Kelleher Date: 04.11.12 Time: 13:49
  */
-abstract class FunctionalTest {
+abstract class FunctionalTestFixture {
     protected static final String STAGE_DIR = "testData/functional/stage"
     protected static final String ROOT_DIR = "../../.."   // relative to the stage dir
 
     protected String specDir;
 
-    public FunctionalTest(String specDir) {
+    public FunctionalTestFixture(String specDir) {
         this.specDir = specDir;
     }
     
     @Before public void setUp() {
         copySpec()
-        compile()
     }
 
-    @Test public void testReportIsGeneratedOnCodeCompile() {
+    @Test public void testReportIsGeneratedOnJavacCompileWithStandardJar() {
+        compile(new JavacRunner("${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j.jar"))
+        checkReport()
+    }
+
+    @Test public void testReportIsGeneratedOnJavacCompileWithCompleteJar() {
+        compile(new JavacRunner("${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j-all.jar"))
+        checkReport()
+    }
+
+    @Test public void testReportIsGeneratedOnJavacCompileWithSkinnyJar() {
+        def cpRoot = "${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j"
+        def classpath =
+            "$cpRoot/accept4j-skinny.jar;" +
+            "$cpRoot/lib/tools.jar;" +
+            "$cpRoot/lib/log4j-1.2.17.jar;" +
+            "$cpRoot/lib/jxl.jar;" +
+            "$cpRoot/lib/groovy-xmlrpc-0.8.jar;" +
+            "$cpRoot/lib/groovy-all-1.8.6.jar"
+
+        compile(new JavacRunner(classpath))
+        checkReport()
+    }
+
+    @Test public void testReportIsGeneratedOnAntCompile() {
+        compile(new AntRunner())
         checkReport()
     }
 
@@ -65,10 +92,7 @@ abstract class FunctionalTest {
         }
     }
 
-    private void compile() {
-        String[] arguments = ["javac", "-d", "out", "-classpath", "$ROOT_DIR/out/artifacts/accept4j/accept4j.jar;$ROOT_DIR/lib/junit-4.10.jar", "src/org/exampleprog/test/*.java"]
-
-        Process proc = Runtime.getRuntime().exec(arguments, null, new File(STAGE_DIR));
-        System.err << proc.errorStream
+    private void compile(Accept4jRunner runner) {
+        runner.run()
     }
 }

@@ -20,11 +20,6 @@ class JiraWrapperXMLRPC implements JiraWrapper {
         loginToken = server.login(username, password)
     }
 
-    void printAllIssues() {
-        def issues = getIssuesFromJira()
-        println convertIssuesToAcceptanceTests(issues)
-    }
-    
     AcceptanceTestSuite getSuite() {
         def issues = getIssuesFromJira()
         return convertIssuesToAcceptanceTests(issues)
@@ -39,7 +34,7 @@ class JiraWrapperXMLRPC implements JiraWrapper {
         return issues
     }
 
-    private filterIssuesByType(issues) {
+    private void filterIssuesByType(issues) {
         def nonSubTaskIssueTypes = server.getIssueTypes(loginToken)*.id
         issues.removeAll { it.type in nonSubTaskIssueTypes }
     }

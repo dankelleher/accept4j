@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="accept4j-zip">
+    <output-path>$PROJECT_DIR$/out/artifacts/accept4j</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="accept4j-skinny" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="lib" />
+      </element>
+    </root>
+  </artifact>
+</component>

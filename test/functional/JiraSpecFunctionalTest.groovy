@@ -3,7 +3,7 @@ package functional
 /**
  * Copyright: Daniel Kelleher Date: 04.11.12 Time: 13:49
  */
-class JiraSpecFunctionalTest extends FunctionalTest {
+class JiraSpecFunctionalTest extends FunctionalTestFixture {
 
     public JiraSpecFunctionalTest() {
         super("jiraspec");

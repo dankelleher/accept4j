@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="accept4j" default="all">
+
+
+    <property file="accept4j.properties"/>
+    <!-- Uncomment the following property if no tests compilation is needed -->
+    <!--
+   <property name="skip.tests" value="true"/>
+    -->
+
+    <!-- Compiler options -->
+
+    <property name="compiler.debug" value="on"/>
+    <property name="compiler.generate.no.warnings" value="off"/>
+    <property name="compiler.args" value=""/>
+    <property name="compiler.max.memory" value="128m"/>
+    <patternset id="ignored.files">
+        <exclude name="**/CVS/**"/>
+        <exclude name="**/SCCS/**"/>
+        <exclude name="**/RCS/**"/>
+        <exclude name="**/rcs/**"/>
+        <exclude name="**/.DS_Store/**"/>
+        <exclude name="**/.svn/**"/>
+        <exclude name="**/.pyc/**"/>
+        <exclude name="**/.pyo/**"/>
+        <exclude name="**/*.pyc/**"/>
+        <exclude name="**/*.pyo/**"/>
+        <exclude name="**/.git/**"/>
+        <exclude name="**/*.hprof/**"/>
+        <exclude name="**/_svn/**"/>
+        <exclude name="**/.hg/**"/>
+        <exclude name="**/*.lib/**"/>
+        <exclude name="**/*~/**"/>
+        <exclude name="**/__pycache__/**"/>
+        <exclude name="**/.bundle/**"/>
+        <exclude name="**/*.rbc/**"/>
+    </patternset>
+    <patternset id="library.patterns">
+        <include name="*.war"/>
+        <include name="*.ear"/>
+        <include name="*.apk"/>
+        <include name="*.zip"/>
+        <include name="*.swc"/>
+        <include name="*.egg"/>
+        <include name="*.jar"/>
+    </patternset>
+    <patternset id="compiler.resources">
+        <include name="**/?*.properties"/>
+        <include name="**/?*.xml"/>
+        <include name="**/?*.gif"/>
+        <include name="**/?*.png"/>
+        <include name="**/?*.jpeg"/>
+        <include name="**/?*.jpg"/>
+        <include name="**/?*.html"/>
+        <include name="**/?*.dtd"/>
+        <include name="**/?*.tld"/>
+        <include name="**/?*.ftl"/>
+    </patternset>
+
+    <!-- JDK definitions -->
+
+    <property name="jdk.bin.1.6" value="${jdk.home.1.6}/bin"/>
+    <path id="jdk.classpath.1.6">
+        <fileset dir="${jdk.home.1.6}">
+            <include name="jre/lib/alt-rt.jar"/>
+            <include name="jre/lib/alt-string.jar"/>
+            <include name="jre/lib/charsets.jar"/>
+            <include name="jre/lib/deploy.jar"/>
+            <include name="jre/lib/javaws.jar"/>
+            <include name="jre/lib/jce.jar"/>
+            <include name="jre/lib/jsse.jar"/>
+            <include name="jre/lib/management-agent.jar"/>
+            <include name="jre/lib/plugin.jar"/>
+            <include name="jre/lib/resources.jar"/>
+            <include name="jre/lib/rt.jar"/>
+            <include name="jre/lib/ext/dnsns.jar"/>
+            <include name="jre/lib/ext/localedata.jar"/>
+            <include name="jre/lib/ext/sunjce_provider.jar"/>
+            <include name="lib/tools.jar"/>
+        </fileset>
+    </path>
+
+    <property name="project.jdk.home" value="${jdk.home.1.6}"/>
+    <property name="project.jdk.bin" value="${jdk.bin.1.6}"/>
+    <property name="project.jdk.classpath" value="jdk.classpath.1.6"/>
+
+
+    <!-- Project Libraries -->
+
+    <path id="library.lib.classpath">
+        <fileset dir="${basedir}/lib">
+            <patternset refid="library.patterns"/>
+        </fileset>
+    </path>
+
+
+    <!-- Global Libraries -->
+
+    <path id="library.groovy-1.8.6.classpath">
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/abeilleformbuilder-3.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ant-1.8.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ant-antlr-1.8.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ant-junit-1.8.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ant-launcher-1.8.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/antlr-2.7.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/asm-3.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/asm-analysis-3.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/asm-commons-3.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/asm-tree-3.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/asm-util-3.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/balloontip-20090102.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-anim-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-awt-util-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-bridge-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-codec-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-css-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-dom-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-ext-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-extension-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-gui-util-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-gvt-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-parser-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-script-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-svg-dom-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-svggen-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-swing-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-transcoder-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-util-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/batik-xml-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/bsf-2.4.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/commons-cli-1.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/cssbuilder-0.6.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/cssparser-0.9.5.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/easyb-0.9.8.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/extra166y-1.7.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/flamingo-4.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/flamingobuilder-0.5.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/forms-1.2.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/formsrt-2.1.0M1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/gant-1.9.7_groovy-1.8.4.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/gfxbuilder-core-0.6.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/gfxbuilder-svg-0.6.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/gfxbuilder-swingx-0.6.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/gmock-0.8.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/gpars-0.12.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/groovy-1.8.6.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/groovyserv-0.9.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/hamcrest-core-1.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/ivy-2.2.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jacob-1.14.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jansi-1.7.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jcsp-1.1-rc5.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jide-oss-2.10.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jidebuilder-5.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jline-0.9.94.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jna-3.2.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jsilhouette-geom-0.4.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jsp-api-2.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/jsr166y-1.7.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/junit-4.10.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/l2fprod-common-all-6.9.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/mac_widgets-0.9.5.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/macwidgetsbuilder-0.5.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/multiverse-beta-0.7-RC-1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/netty-3.2.7.Final.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/sac-1.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-ie-6-tlb-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-office-2K3-tlb-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-sapi-tlb-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-scripting-tlb-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-wbem-tlb-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/scriptom-wsh-tlb-1.6.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/servlet-api-2.4.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/spock-core-0.6-groovy-1.8-SNAPSHOT.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/svg-salamander-1.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swing-worker-1.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-action-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-autocomplete-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-beaninfo-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-common-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-core-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-graphics-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-painters-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingx-plaf-1.6.3.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingxbuilder-0.2.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/swingxtrasbuilder-0.4.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/timingframework-1.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/trident-7.0.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/tridentbuilder-0.6.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/xml-apis-ext-1.3.04.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/xmlpull-1.1.3.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/xstream-1.4.1.jar"/>
+        <pathelement location="C:/Program Files (x86)/Groovy/Groovy-1.8.6/lib/xswingx-0.2.jar"/>
+    </path>
+
+
+    <!-- Application Server Libraries -->
+    <!-- Register Custom Compiler Taskdefs -->
+    <target name="register.custom.compilers">
+        <property name="grooovyc.task.sdk" value="library.grails-2.1.0.classpath"/>
+        <taskdef name="groovyc" classname="org.codehaus.groovy.ant.Groovyc" classpathref="library.groovy-1.8.6.classpath"/>
+    </target>
+
+    <!-- Modules -->
+
+
+    <!-- Module Accept4J -->
+
+    <dirname property="module.accept4j.basedir" file="${ant.file}"/>
+
+
+    <property name="module.jdk.home.accept4j" value="${project.jdk.home}"/>
+    <property name="module.jdk.bin.accept4j" value="${project.jdk.bin}"/>
+    <property name="module.jdk.classpath.accept4j" value="${project.jdk.classpath}"/>
+
+    <property name="compiler.args.accept4j" value="${compiler.args}"/>
+
+    <property name="accept4j.testsrc.dir" value="${module.accept4j.basedir}/test"/>
+    <property name="accept4j.output.dir" value="${module.accept4j.basedir}/out/production/Accept4J"/>
+    <property name="accept4j.testoutput.dir" value="${module.accept4j.basedir}/out/test/Accept4J"/>
+
+    <property name="reports.dir" value="${module.accept4j.basedir}/reports"/>
+
+    <path id="accept4j.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="accept4j.module.production.classpath">
+        <path refid="${module.jdk.classpath.accept4j}"/>
+        <path refid="library.groovy-1.8.6.classpath"/>
+        <path refid="library.lib.classpath"/>
+    </path>
+
+    <path id="accept4j.runtime.production.module.classpath">
+        <pathelement location="${accept4j.output.dir}"/>
+        <path refid="library.groovy-1.8.6.classpath"/>
+        <path refid="library.lib.classpath"/>
+        <pathelement location="${basedir}"/>
+        <pathelement location="${basedir}/conf"/>
+    </path>
+
+    <path id="accept4j.module.classpath">
+        <path refid="${module.jdk.classpath.accept4j}"/>
+        <pathelement location="${accept4j.output.dir}"/>
+        <path refid="library.groovy-1.8.6.classpath"/>
+        <path refid="library.lib.classpath"/>
+    </path>
+
+    <path id="accept4j.runtime.module.classpath">
+        <pathelement location="${accept4j.testoutput.dir}"/>
+        <pathelement location="${accept4j.output.dir}"/>
+        <path refid="library.groovy-1.8.6.classpath"/>
+        <path refid="library.lib.classpath"/>
+        <pathelement location="${basedir}"/>
+        <pathelement location="${basedir}/conf"/>
+    </path>
+
+
+    <patternset id="excluded.from.module.accept4j">
+        <patternset refid="ignored.files"/>
+    </patternset>
+
+    <patternset id="excluded.from.compilation.accept4j">
+        <patternset refid="excluded.from.module.accept4j"/>
+    </patternset>
+
+    <path id="accept4j.module.sourcepath">
+        <dirset dir="${module.accept4j.basedir}">
+            <include name="src"/>
+            <include name="conf"/>
+        </dirset>
+    </path>
+
+    <path id="accept4j.module.test.sourcepath">
+        <dirset dir="${module.accept4j.basedir}">
+            <include name="test"/>
+        </dirset>
+    </path>
+
+
+    <target name="compile.module.accept4j" depends="compile.module.accept4j.production,compile.module.accept4j.tests" description="Compile module Accept4J"/>
+
+    <target name="compile.module.accept4j.production" depends="register.custom.compilers" description="Compile module Accept4J; production classes">
+        <mkdir dir="${accept4j.output.dir}"/>
+        <groovyc destdir="${accept4j.output.dir}" fork="yes">
+            <src refid="accept4j.module.sourcepath"/>
+            <classpath refid="accept4j.module.production.classpath"/>
+            <patternset refid="excluded.from.compilation.accept4j"/>
+            <javac debug="${compiler.debug}">
+                <compilerarg line="${compiler.args.accept4j}"/>
+            </javac>
+        </groovyc>
+
+        <copy todir="${accept4j.output.dir}">
+            <fileset dir="${module.accept4j.basedir}/src">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+            <fileset dir="${module.accept4j.basedir}/conf">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile.module.accept4j.tests" depends="register.custom.compilers,compile.module.accept4j.production" description="compile module Accept4J; test classes" unless="skip.tests">
+        <mkdir dir="${accept4j.testoutput.dir}"/>
+        <groovyc destdir="${accept4j.testoutput.dir}" fork="yes">
+            <src refid="accept4j.module.test.sourcepath"/>
+            <classpath refid="accept4j.module.classpath"/>
+            <patternset refid="excluded.from.compilation.accept4j"/>
+            <javac debug="${compiler.debug}">
+                <compilerarg line="${compiler.args.accept4j}"/>
+            </javac>
+        </groovyc>
+
+        <copy todir="${accept4j.testoutput.dir}">
+            <fileset dir="${module.accept4j.basedir}/test">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="clean.module.accept4j" description="cleanup module">
+        <delete dir="${accept4j.output.dir}"/>
+        <delete dir="${accept4j.testoutput.dir}"/>
+    </target>
+
+    <target name="init" description="Build initialization">
+        <!-- Perform any build initialization in this target -->
+    </target>
+
+    <target name="clean" depends="clean.module.accept4j, clean.artifact.accept4j-zip" description="cleanup all"/>
+
+    <target name="build.modules" depends="init, clean, compile.module.accept4j" description="build all modules"/>
+
+    <target name="init.artifacts">
+        <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+        <property name="artifact.output.accept4j" value="${basedir}/out/artifacts"/>
+        <property name="artifact.output.accept4j-all" value="${basedir}/out/artifacts"/>
+        <property name="artifact.output.accept4j-skinny" value="${basedir}/out/artifacts"/>
+        <property name="artifact.output.accept4j-zip" value="${basedir}/out/artifacts/accept4j"/>
+        <property name="artifact.output.examples" value="${basedir}/out/artifacts/examples"/>
+        <mkdir dir="${artifacts.temp.dir}"/>
+        <property name="temp.jar.path.accept4j.jar" value="${artifacts.temp.dir}/accept4j.jar"/>
+        <property name="temp.jar.path.accept4j-all.jar" value="${artifacts.temp.dir}/accept4j-all.jar"/>
+        <property name="temp.jar.path.accept4j-skinny.jar" value="${artifacts.temp.dir}/accept4j-skinny.jar"/>
+    </target>
+
+    <target name="clean.artifact.accept4j-zip" description="clean accept4j-zip artifact output">
+        <delete dir="${artifact.output.accept4j-zip}"/>
+    </target>
+
+    <target name="artifact.accept4j" depends="init.artifacts, compile.module.accept4j" description="Build &#39;accept4j&#39; artifact">
+        <property name="artifact.temp.output.accept4j" value="${artifacts.temp.dir}/accept4j"/>
+        <mkdir dir="${artifact.temp.output.accept4j}"/>
+        <jar destfile="${temp.jar.path.accept4j.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+            <zipfileset dir="${accept4j.output.dir}"/>
+            <zipfileset file="${basedir}/META-INF/MANIFEST.MF" prefix="META-INF"/>
+            <zipfileset file="${basedir}/META-INF/services/javax.annotation.processing.Processor" prefix="META-INF/services"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset src="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset dir="${basedir}/template" prefix="template"/>
+            <zipfileset dir="${basedir}/resources" prefix="resources"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset src="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset dir="${basedir}/conf"/>
+            <zipfileset src="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset src="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+        </jar>
+        <copy file="${temp.jar.path.accept4j.jar}" tofile="${artifact.temp.output.accept4j}/accept4j.jar"/>
+    </target>
+
+    <target name="artifact.accept4j-all" depends="init.artifacts, compile.module.accept4j" description="Build &#39;accept4j-all&#39; artifact">
+        <property name="artifact.temp.output.accept4j-all" value="${artifacts.temp.dir}/accept4j_all"/>
+        <mkdir dir="${artifact.temp.output.accept4j-all}"/>
+        <jar destfile="${temp.jar.path.accept4j-all.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+            <zipfileset file="${basedir}/META-INF/MANIFEST.MF" prefix="META-INF"/>
+            <zipfileset file="${basedir}/META-INF/services/javax.annotation.processing.Processor" prefix="META-INF/services"/>
+            <zipfileset dir="${basedir}/conf"/>
+            <zipfileset dir="${basedir}/resources" prefix="resources"/>
+            <zipfileset dir="${basedir}/template" prefix="template"/>
+            <zipfileset src="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset src="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset src="${basedir}/lib/jxl.jar"/>
+            <zipfileset src="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset dir="${accept4j.output.dir}"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset file="${basedir}/lib/tools.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-all-1.8.6.jar"/>
+            <zipfileset file="${basedir}/lib/mockito-all-1.9.5-rc1.jar"/>
+            <zipfileset file="${basedir}/lib/log4j-1.2.17.jar"/>
+            <zipfileset file="${basedir}/lib/jxl.jar"/>
+            <zipfileset file="${basedir}/lib/groovy-xmlrpc-0.8.jar"/>
+            <zipfileset file="${basedir}/lib/junit-4.10.jar"/>
+            <zipfileset dir="${basedir}/src" prefix="src"/>
+        </jar>
+        <copy file="${temp.jar.path.accept4j-all.jar}" tofile="${artifact.temp.output.accept4j-all}/accept4j-all.jar"/>
+    </target>
+
+    <target name="artifact.accept4j-skinny" depends="init.artifacts, compile.module.accept4j" description="Build &#39;accept4j-skinny&#39; artifact">
+        <property name="artifact.temp.output.accept4j-skinny" value="${artifacts.temp.dir}/accept4j_skinny"/>
+        <mkdir dir="${artifact.temp.output.accept4j-skinny}"/>
+        <jar destfile="${temp.jar.path.accept4j-skinny.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+            <zipfileset dir="${basedir}/META-INF" prefix="META-INF"/>
+            <zipfileset dir="${basedir}/resources" prefix="resources"/>
+            <zipfileset dir="${basedir}/template" prefix="template"/>
+            <zipfileset dir="${accept4j.output.dir}"/>
+            <zipfileset dir="${basedir}/conf"/>
+        </jar>
+        <copy file="${temp.jar.path.accept4j-skinny.jar}" tofile="${artifact.temp.output.accept4j-skinny}/accept4j-skinny.jar"/>
+    </target>
+
+    <target name="artifact.accept4j-zip" depends="init.artifacts, artifact.accept4j-skinny" description="Build &#39;accept4j-zip&#39; artifact">
+        <mkdir dir="${artifact.output.accept4j-zip}"/>
+        <copy todir="${artifact.output.accept4j-zip}">
+            <fileset dir="${artifact.temp.output.accept4j-skinny}"/>
+        </copy>
+        <mkdir dir="${artifact.output.accept4j-zip}/lib"/>
+        <copy file="${basedir}/lib/tools.jar" tofile="${artifact.output.accept4j-zip}/lib/tools.jar"/>
+        <copy file="${basedir}/lib/groovy-all-1.8.6.jar" tofile="${artifact.output.accept4j-zip}/lib/groovy-all-1.8.6.jar"/>
+        <copy file="${basedir}/lib/mockito-all-1.9.5-rc1.jar" tofile="${artifact.output.accept4j-zip}/lib/mockito-all-1.9.5-rc1.jar"/>
+        <copy file="${basedir}/lib/log4j-1.2.17.jar" tofile="${artifact.output.accept4j-zip}/lib/log4j-1.2.17.jar"/>
+        <copy file="${basedir}/lib/jxl.jar" tofile="${artifact.output.accept4j-zip}/lib/jxl.jar"/>
+        <copy file="${basedir}/lib/groovy-xmlrpc-0.8.jar" tofile="${artifact.output.accept4j-zip}/lib/groovy-xmlrpc-0.8.jar"/>
+        <copy file="${basedir}/lib/junit-4.10.jar" tofile="${artifact.output.accept4j-zip}/lib/junit-4.10.jar"/>
+    </target>
+
+    <target name="artifact.examples" depends="init.artifacts, artifact.accept4j, artifact.accept4j, artifact.accept4j, artifact.accept4j" description="Build &#39;examples&#39; artifact">
+        <mkdir dir="${artifact.output.examples}"/>
+        <mkdir dir="${artifact.output.examples}/xmlspec"/>
+        <copy todir="${artifact.output.examples}/xmlspec">
+            <fileset dir="${basedir}/testData/functional/xmlspec"/>
+        </copy>
+        <mkdir dir="${artifact.output.examples}/xmlspec/lib"/>
+        <copy todir="${artifact.output.examples}/xmlspec/lib">
+            <fileset dir="${artifact.temp.output.accept4j}"/>
+        </copy>
+        <copy file="${basedir}/lib/junit-4.10.jar" tofile="${artifact.output.examples}/xmlspec/lib/junit-4.10.jar"/>
+        <copy file="${basedir}/testData/functional/build.xml" tofile="${artifact.output.examples}/xmlspec/build.xml"/>
+        <mkdir dir="${artifact.output.examples}/excelspec"/>
+        <copy todir="${artifact.output.examples}/excelspec">
+            <fileset dir="${basedir}/testData/functional/excelspec"/>
+        </copy>
+        <mkdir dir="${artifact.output.examples}/excelspec/lib"/>
+        <copy todir="${artifact.output.examples}/excelspec/lib">
+            <fileset dir="${artifact.temp.output.accept4j}"/>
+        </copy>
+        <copy file="${basedir}/lib/junit-4.10.jar" tofile="${artifact.output.examples}/excelspec/lib/junit-4.10.jar"/>
+        <copy file="${basedir}/testData/functional/build.xml" tofile="${artifact.output.examples}/excelspec/build.xml"/>
+        <mkdir dir="${artifact.output.examples}/jiraspec"/>
+        <copy todir="${artifact.output.examples}/jiraspec">
+            <fileset dir="${basedir}/testData/functional/jiraspec"/>
+        </copy>
+        <mkdir dir="${artifact.output.examples}/jiraspec/lib"/>
+        <copy todir="${artifact.output.examples}/jiraspec/lib">
+            <fileset dir="${artifact.temp.output.accept4j}"/>
+        </copy>
+        <copy file="${basedir}/lib/junit-4.10.jar" tofile="${artifact.output.examples}/jiraspec/lib/junit-4.10.jar"/>
+        <copy file="${basedir}/testData/functional/build.xml" tofile="${artifact.output.examples}/jiraspec/build.xml"/>
+        <mkdir dir="${artifact.output.examples}/dirspec"/>
+        <copy todir="${artifact.output.examples}/dirspec">
+            <fileset dir="${basedir}/testData/functional/dirspec"/>
+        </copy>
+        <mkdir dir="${artifact.output.examples}/dirspec/lib"/>
+        <copy todir="${artifact.output.examples}/dirspec/lib">
+            <fileset dir="${artifact.temp.output.accept4j}"/>
+        </copy>
+        <copy file="${basedir}/lib/junit-4.10.jar" tofile="${artifact.output.examples}/dirspec/lib/junit-4.10.jar"/>
+        <copy file="${basedir}/testData/functional/build.xml" tofile="${artifact.output.examples}/dirspec/build.xml"/>
+        <antcall target="zip.examples"/>
+    </target>
+
+    <target name="zip.examples">
+        <zip destfile="${basedir}/out/artifacts/examples.zip"
+             basedir="${artifact.output.examples}"
+                />
+    </target>
+
+    <target name="build.all.artifacts" depends="artifact.accept4j, artifact.accept4j-all, artifact.accept4j-skinny, artifact.accept4j-zip, artifact.examples" description="Build all artifacts">
+        <mkdir dir="${artifact.output.accept4j}"/>
+        <copy todir="${artifact.output.accept4j}">
+            <fileset dir="${artifact.temp.output.accept4j}"/>
+        </copy>
+        <mkdir dir="${artifact.output.accept4j-all}"/>
+        <copy todir="${artifact.output.accept4j-all}">
+            <fileset dir="${artifact.temp.output.accept4j-all}"/>
+        </copy>
+        <mkdir dir="${artifact.output.accept4j-skinny}"/>
+        <copy todir="${artifact.output.accept4j-skinny}">
+            <fileset dir="${artifact.temp.output.accept4j-skinny}"/>
+        </copy>
+
+        <!-- Delete temporary files -->
+        <delete dir="${artifacts.temp.dir}"/>
+    </target>
+
+    <target name="test" depends="build.modules">
+        <junit printsummary="yes">
+            <classpath refid="accept4j.runtime.module.classpath"/>
+
+            <formatter type="plain"/>
+
+            <batchtest fork="yes" todir="${reports.dir}">
+                <fileset dir="${accept4j.testoutput.dir}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="all" depends="build.modules, build.all.artifacts, test" description="build all"/>
+</project>
