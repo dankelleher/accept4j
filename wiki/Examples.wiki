@@ -1,13 +1,16 @@
 #summary How to download and run the example projects
 
-= Introduction =
+[http://accept4j.googlecode.com/files/examples.zip examples.zip examples.zip] contains set of directories, each containing an example project using a different spec type.
 
-Add your content here.
+To run an example
 
+1. Download and extract [http://accept4j.googlecode.com/files/examples.zip examples.zip]
+2. Pick a spec type and open the associated directory 
+3. Open a terminal at the root of this
+4. Run the ant build script included (just type `ant`, and the default build task will run)
+ OR
+3. If you don't want to use ant, just use javac, including the jars in the lib/ directory on your classpath:
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+javac -d out -classpath lib/accept4j.jar;lib/junit-4.10.jar src\org\exampleprog\test\*.java
+}}}
