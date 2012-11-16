@@ -4,10 +4,10 @@
 
 To run an example:
 
-  * Download and extract [http://accept4j.googlecode.com/files/examples.zip examples.zip]
-  * Pick a spec type and open the associated directory 
-  * Open a terminal at the root of this directory
-  * Run the ant build script included (just type `ant`, and the default build task will run)
+  # Download and extract [http://accept4j.googlecode.com/files/examples.zip examples.zip]
+  # Pick a spec type and open the associated directory 
+  # Open a terminal at the root of this directory
+  # Run the ant build script included (just type `ant`, and the default build task will run)
  OR
 If you don't want to use ant, just use javac, including the jars in the lib/ directory on your classpath:
 
