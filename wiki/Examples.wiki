@@ -4,12 +4,12 @@
 
 To run an example
 
-1. Download and extract [http://accept4j.googlecode.com/files/examples.zip examples.zip]
-2. Pick a spec type and open the associated directory 
-3. Open a terminal at the root of this
-4. Run the ant build script included (just type `ant`, and the default build task will run)
+  * Download and extract [http://accept4j.googlecode.com/files/examples.zip examples.zip]
+  * Pick a spec type and open the associated directory 
+  * Open a terminal at the root of this directory
+  * Run the ant build script included (just type `ant`, and the default build task will run)
  OR
-3. If you don't want to use ant, just use javac, including the jars in the lib/ directory on your classpath:
+  If you don't want to use ant, just use javac, including the jars in the lib/ directory on your classpath:
 
 {{{
 javac -d out -classpath lib/accept4j.jar;lib/junit-4.10.jar src\org\exampleprog\test\*.java
