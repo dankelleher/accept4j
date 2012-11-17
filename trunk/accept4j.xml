@@ -333,7 +333,7 @@
         <!-- Perform any build initialization in this target -->
     </target>
 
-    <target name="clean" depends="clean.module.accept4j, clean.artifact.accept4j-zip" description="cleanup all"/>
+    <target name="clean" depends="clean.module.accept4j, clean.artifact.accept4j-zip, clean.artifact.examples" description="cleanup all"/>
 
     <target name="build.modules" depends="init, clean, compile.module.accept4j" description="build all modules"/>
 
@@ -352,6 +352,10 @@
 
     <target name="clean.artifact.accept4j-zip" description="clean accept4j-zip artifact output">
         <delete dir="${artifact.output.accept4j-zip}"/>
+    </target>
+
+    <target name="clean.artifact.examples" description="clean examples artifact output">
+        <delete dir="${artifact.output.examples}"/>
     </target>
 
     <target name="artifact.accept4j" depends="init.artifacts, compile.module.accept4j" description="Build &#39;accept4j&#39; artifact">
