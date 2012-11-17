@@ -67,6 +67,13 @@ abstract class FunctionalTestFixture {
 
         assert getImageForTest(report, '2.1', true)
         assert getImageForTest(report, '2.2', true)
+
+        assert getNameForTest(report, '1.1') == 'the client should be billed'
+        assert getNameForTest(report, '1.2') == 'the stock should be reduced'
+        assert getNameForTest(report, '1.3') == 'the order is rejected if the stock is unavailable'
+
+        assert getNameForTest(report, '2.1') == 'the client should be refunded if the order is not yet filled'
+        assert getNameForTest(report, '2.2') == 'the cancellation should be declined if the order is filled'
     }
 
     protected def getImageForTest(GPathResult report, String testId, boolean exists) {
@@ -80,6 +87,15 @@ abstract class FunctionalTestFixture {
             it.name() == 'img' && it.@title == title
         }
         return img
+    }
+
+    protected def getNameForTest(GPathResult report, String testId) {
+        def testIdField = report.'**'.find {
+            it.name() == 'td' && it.text() == testId
+        }
+        def testRow = testIdField.'..'
+        def name = testRow.td[2].text()
+        return name
     }
 
     private void deleteFiles() {
