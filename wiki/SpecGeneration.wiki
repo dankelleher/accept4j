@@ -70,7 +70,7 @@ Include an XML file called `spec.xml` in the [SpecGeneration#Working_Directory w
 
 ===Working Directory===
 
-The _working directory_ is whatever directory you run the java compiler from. 
+The _working directory_ is whatever directory you run the java compiler from. Often this will be the root directory of your project.
 
 ===JIRA filter ID===
 
