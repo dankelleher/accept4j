@@ -3,6 +3,9 @@
         <fileset dir="../../../lib">
             <include name="*.jar"/>
         </fileset>
+        <fileset dir=".">
+            <include name="*.jar"/>
+        </fileset>
         <pathelement path="../../../out/artifacts/accept4j.jar"/>
     </path>
 

@@ -20,7 +20,7 @@ import org.accept4j.specification.generator.SpecGenerator
 class AcceptanceTestProcessor extends AbstractProcessor {
     static AnnotationVisitor visitor = new AnnotationVisitor()
 
-    static final String  PATH = "accept4j"
+    static final String PATH = "accept4j"
 
     private SpecGenerator specGenerator
 
@@ -58,7 +58,8 @@ class AcceptanceTestProcessor extends AbstractProcessor {
             return // in second round
         }
 
-        suite.compareToSpec();
+        suite.compareToSpec()
+        suite.recursiveSort()
 
         new File("$PATH/test.xml").write suite.toXML()
     }
