@@ -24,14 +24,16 @@ abstract class FunctionalTestFixture {
     @Before public void setUp() {
         copySpec()
     }
+    
+    protected String getAdditionalClasspath() {""}
 
     @Test public void testReportIsGeneratedOnJavacCompileWithStandardJar() {
-        compile(new JavacRunner("${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j.jar"))
+        compile(new JavacRunner("${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j.jar$additionalClasspath"))
         checkReport()
     }
 
     @Test public void testReportIsGeneratedOnJavacCompileWithCompleteJar() {
-        compile(new JavacRunner("${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j-all.jar"))
+        compile(new JavacRunner("${FunctionalTestFixture.ROOT_DIR}/out/artifacts/accept4j-all.jar$additionalClasspath"))
         checkReport()
     }
 
@@ -43,7 +45,8 @@ abstract class FunctionalTestFixture {
             "$cpRoot/lib/log4j-1.2.17.jar;" +
             "$cpRoot/lib/jxl.jar;" +
             "$cpRoot/lib/groovy-xmlrpc-0.8.jar;" +
-            "$cpRoot/lib/groovy-all-1.8.6.jar"
+            "$cpRoot/lib/groovy-all-1.8.6.jar" +
+            additionalClasspath
 
         compile(new JavacRunner(classpath))
         checkReport()
@@ -74,6 +77,16 @@ abstract class FunctionalTestFixture {
 
         assert getNameForTest(report, '2.1') == 'the client should be refunded if the order is not yet filled'
         assert getNameForTest(report, '2.2') == 'the cancellation should be declined if the order is filled'
+
+        assertTestsInOrder(report, ['1.1', '1.2', '1.3', '2.1', '2.2'])
+    }
+
+    protected def assertTestsInOrder(GPathResult report, def testList) {
+        def foundTests = report.'**'.findAll {
+            it.name() == 'td' && it.text() in testList
+        }
+
+        assert foundTests*.text() == testList
     }
 
     protected def getImageForTest(GPathResult report, String testId, boolean exists) {

@@ -11,10 +11,15 @@ class AcceptanceTestSuite {
     String name
     Date datetime
 
-    List<AcceptanceTestPackGroup> groups = new ArrayList<AcceptanceTestPackGroup>();
+    Set<AcceptanceTestPackGroup> groups = new TreeSet<AcceptanceTestPackGroup>();
 
     public void add(AcceptanceTestPackGroup group) {
         groups.add(group)
+    }
+
+    public AcceptanceTestSuite leftShift(AcceptanceTestPackGroup group) {
+        add(group)
+        return this
     }
 
     public boolean isEmpty() {
@@ -75,7 +80,7 @@ class AcceptanceTestSuite {
 
             implementedTest = new AcceptanceTestItem(id: testId)
             implementedTest.addSpecDetails(test)
-            implementedPack.add(implementedTest)
+            implementedPack << implementedTest
         }
     }
 
@@ -91,5 +96,19 @@ class AcceptanceTestSuite {
 
     private AcceptanceTestItem findTestById(testId) {
         groups.findResult  { it.findTestById(testId) }
+    }
+
+    void recursiveSort() {
+        groups*.recursiveSort()  // sort the groups
+        resort()
+    }
+
+    private void resort() {
+        def newGroups = new TreeSet<AcceptanceTestPackGroup>()
+        groups.each {
+            newGroups << it
+        }
+        //newGroups.addAll(groups) // This doesn't work... I think addAll must optimise if the input is a sorted set and not bother resorting
+        groups = newGroups
     }
 }

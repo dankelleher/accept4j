@@ -350,11 +350,11 @@
         <property name="temp.jar.path.accept4j-skinny.jar" value="${artifacts.temp.dir}/accept4j-skinny.jar"/>
     </target>
 
-    <target name="clean.artifact.accept4j-zip" description="clean accept4j-zip artifact output">
+    <target name="clean.artifact.accept4j-zip" description="clean accept4j-zip artifact output" depends="init.artifacts">
         <delete dir="${artifact.output.accept4j-zip}"/>
     </target>
 
-    <target name="clean.artifact.examples" description="clean examples artifact output">
+    <target name="clean.artifact.examples" description="clean examples artifact output" depends="init.artifacts">
         <delete dir="${artifact.output.examples}"/>
     </target>
 
@@ -582,7 +582,7 @@
         <antcall target="zip.examples"/>
     </target>
 
-    <target name="zip.examples">
+    <target name="zip.examples"  depends="init.artifacts">
         <zip destfile="${basedir}/out/artifacts/examples.zip"
              basedir="${artifact.output.examples}"
                 />

@@ -46,7 +46,7 @@ div.packName{
     padding-bottom: 10px;
 }
 
-#testDetailsTable {
+table.testDetailsTable {
     border-collapse:collapse;
     font: 8pt Verdana, Geneva, sans-serif;
     width: 96%;
@@ -54,7 +54,7 @@ div.packName{
     margin-left:auto;
 }
 
-#testDetailsTable td {
+table.testDetailsTable td {
     padding: 7px 15px 7px;
 }
 
@@ -62,23 +62,23 @@ img.icon {
     width: 24px;
 }
 
-#testDetailsTable td.iconCol {
+table.testDetailsTable td.iconCol {
     padding-left: 0px;
     padding-right: 0px;
     width: 24px;
 }
 
-#testDetailsTable td.idCol{
+table.testDetailsTable td.idCol{
     width: 5%;
 }
 
-#testDetailsTable td.nameCol {
-    width: 14%;
+table.testDetailsTable td.nameCol {
+    width: 25%;
 }
 
-#testDetailsTable td.methodNameCol {
+table.testDetailsTable td.methodNameCol {
     font-family: "Courier New", Courier, monospace;
-    width: 10%;
+    width: 25%;
 }
 
 td.descCol pre {

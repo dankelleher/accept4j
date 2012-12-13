@@ -42,7 +42,7 @@ class DirectorySpecGenerator implements SpecGenerator {
                         String id = extractIDFromFilename(it)
                         String name = extractNameFromFilename(it)
                         AcceptanceTestItem test = new AcceptanceTestItem(id: id, name: name)
-                        pack.add(test)
+                        pack << test
                     }
                 }
             }

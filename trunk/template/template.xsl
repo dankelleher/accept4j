@@ -37,11 +37,20 @@
         <div class="packDiv">
             <div class="packName"><xsl:value-of select="@name"/></div>
             <table class="testDetailsTable">
+                <xsl:if test="(count(preceding-sibling::pack) = 0) and (count(../preceding-sibling::group) = 0)">
+                    <tr>
+                        <th/>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Test Method</th>
+                        <th>Description</th>
+                    </tr>
+                </xsl:if>
                 <xsl:apply-templates/>
             </table>
         </div>
     </xsl:template>
-    
+
     <xsl:template match="test">
         <tr>
             <td class="iconCol">
