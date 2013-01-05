@@ -32,8 +32,8 @@ class AcceptanceTestPackGroup implements Comparable<AcceptanceTestPackGroup> {
         }
     }
 
-    private AcceptanceTestItem findTestById(testId) {
-        testPacks.findResult  { it.findTestById(testId) }
+    private AcceptanceTestItem find(args) {
+        testPacks.findResult  { it.find(args) }
     }
 
     @Override

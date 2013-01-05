@@ -13,6 +13,12 @@ class AcceptanceTestSuite {
 
     Set<AcceptanceTestPackGroup> groups = new TreeSet<AcceptanceTestPackGroup>();
 
+    static AcceptanceTestSuite loadFromXML(String file) {
+        AcceptanceTestSuite suite = new AcceptanceTestSuite()
+        suite.populateFromXML(file)
+        return suite
+    }
+
     public void add(AcceptanceTestPackGroup group) {
         groups.add(group)
     }
@@ -35,6 +41,10 @@ class AcceptanceTestSuite {
 
         return group
     }
+    
+    public AcceptanceTestItem findTest(args) {
+        groups.findResult { it.find(args) }
+    }
 
     public String toXML() {
         def stringWriter = new StringWriter()
@@ -48,12 +58,18 @@ class AcceptanceTestSuite {
     }
 
     protected void compareToSpec() {
-        if (!new File("spec.xml").exists()) {
+        def specFile = "spec.xml"
+
+        if (!new File(specFile).exists()) {
             log.error "No spec found"
             return
         }
 
-        def spec = new XmlSlurper().parse("spec.xml")
+        populateFromXML(specFile)
+    }
+
+    private void populateFromXML(String specFile) {
+        def spec = new XmlSlurper().parse(specFile)
 
         name = spec.@name.text()
         datetime = new Date()
@@ -74,12 +90,12 @@ class AcceptanceTestSuite {
         def implementedTest = findImplementedTest(groupName, packName, testId)
 
         if (implementedTest) {
-            implementedTest.addSpecDetails(test)
+            implementedTest.addXMLDetails(test)
         } else {
             def implementedPack = findOrCreate(groupName).findOrCreate(packName)
 
             implementedTest = new AcceptanceTestItem(id: testId)
-            implementedTest.addSpecDetails(test)
+            implementedTest.addXMLDetails(test)
             implementedPack << implementedTest
         }
     }
@@ -87,15 +103,15 @@ class AcceptanceTestSuite {
     private AcceptanceTestItem findImplementedTest(groupName, packName, testId) {
         if ((groupName == "") && (packName == "")) {
             // just search by test id
-            return findTestById(testId)
+            return find(id: testId)
         } else {
             def implementedPack = findOrCreate(groupName).findOrCreate(packName)
-            return implementedPack.find(testId)
+            return implementedPack.find(id: testId)
         }
     }
 
-    private AcceptanceTestItem findTestById(testId) {
-        groups.findResult  { it.findTestById(testId) }
+    private AcceptanceTestItem find(args) {
+        groups.findResult  { it.find(args) }
     }
 
     void recursiveSort() {

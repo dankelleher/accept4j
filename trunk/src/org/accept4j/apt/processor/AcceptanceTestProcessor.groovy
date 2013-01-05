@@ -7,9 +7,7 @@ import javax.annotation.processing.SupportedAnnotationTypes
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.TypeElement
-import javax.xml.transform.TransformerFactory
-import javax.xml.transform.stream.StreamResult
-import javax.xml.transform.stream.StreamSource
+
 import org.accept4j.testpack.AcceptanceTestSuite
 import org.accept4j.specification.SpecGeneratorFactory
 import org.accept4j.specification.generator.SpecGenerator
@@ -21,6 +19,8 @@ class AcceptanceTestProcessor extends AbstractProcessor {
     static AnnotationVisitor visitor = new AnnotationVisitor()
 
     static final String PATH = "accept4j"
+    static final String XML_FILE = "$PATH/test.xml"
+    static final String HTML_FILE = "$PATH/test.html"
 
     private SpecGenerator specGenerator
 
@@ -32,7 +32,7 @@ class AcceptanceTestProcessor extends AbstractProcessor {
     boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         generateSpec()
         generateXML(annotations, roundEnv)
-        convertToHTML()
+        SpecFormatConverter.convertToHTML()
         postProcess()
 
         return true;
@@ -61,13 +61,7 @@ class AcceptanceTestProcessor extends AbstractProcessor {
         suite.compareToSpec()
         suite.recursiveSort()
 
-        new File("$PATH/test.xml").write suite.toXML()
-    }
-
-    protected void convertToHTML() {
-        def factory = TransformerFactory.newInstance()
-        def transformer = factory.newTransformer(new StreamSource(getClass().getClassLoader().getResourceAsStream("template/template.xsl")))
-        transformer.transform(new StreamSource("$PATH/test.xml"), new StreamResult("$PATH/test.html"))
+        new File(XML_FILE).write suite.toXML()
     }
 
     protected void explodeJarResources() {

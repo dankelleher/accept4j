@@ -16,14 +16,18 @@ class AcceptanceTestPackUnitTest {
     }
 
     @Test void emptyPackShouldReturnNullWhenLookingForTest() {
-        assert pack.find("anytest") == null
+        assert pack.find(id: "anytest") == null
     }
 
-    @Test void findInGroupShouldReturnThePack() {
-        def test = new AcceptanceTestItem(id: "tmp")
-        pack << test
+    @Test void findWithArgsReturnTheTest() {
+        def test1 = new AcceptanceTestItem(id: "test1", methodName: "method1", name: "name1")
+        def test2 = new AcceptanceTestItem(id: "test2", methodName: "method2", name: "name2")
+        pack << test1 << test2
 
-        assert pack.find("tmp") == test
+        assert pack.find([id: "test1"]) == test1
+        assert pack.find([methodName: "method1"]) == test1
+        assert pack.find([id: "test1", methodName: "method1"]) == test1
+        assert pack.find([id: "test1", methodName: "method2"]) == null
     }
     
     @Test void idOrderMaintainedWhenAdding() {

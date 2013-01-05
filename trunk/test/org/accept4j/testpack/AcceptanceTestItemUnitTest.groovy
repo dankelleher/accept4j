@@ -1,6 +1,7 @@
 package org.accept4j.testpack
 
 import org.junit.Test
+import groovy.xml.MarkupBuilder
 
 /**
  * Copyright: Daniel Kelleher Date: 09.12.12 Time: 15:43
@@ -22,4 +23,34 @@ class AcceptanceTestItemUnitTest {
         assert new AcceptanceTestItem(id: "")> new AcceptanceTestItem()
     }
     
+    @Test void aTestWithNoExecutionDataShouldNotIncludeItInXML() {
+        def stringWriter = new StringWriter()
+        def builder = new MarkupBuilder(stringWriter)
+
+        new AcceptanceTestItem(id : "hello").toXML(builder)
+
+        assert !stringWriter.toString().contains("<executionData>")
+    }
+
+    @Test void aTestWithExecutionDataShouldIncludeItInXML() {
+        def stringWriter = new StringWriter()
+        def builder = new MarkupBuilder(stringWriter)
+
+        new AcceptanceTestItem(id : "hello", executionData: new ExecutionData(status: ExecutionData.Status.PASS)).toXML(builder)
+
+        def xml = stringWriter.toString().replaceAll("\\s+", "")
+
+        assert xml.contains("<executionData>")
+        assert xml.contains("<status>PASS</status>")
+    }
+    
+    @Test void testMatchesArguments() {
+        def test = new AcceptanceTestItem(id: "a", methodName: "b", name: "c", executionData: new ExecutionData(status: ExecutionData.Status.PASS))
+        
+        assert test.matches(id: "a")
+        assert test.matches(id: "a", methodName: "b")
+        assert !test.matches(id: "1", methodName: "b")
+        assert test.matches(executionData: new ExecutionData(status: ExecutionData.Status.PASS))
+        assert !test.matches(executionData: new ExecutionData(status: ExecutionData.Status.FAIL))
+    }
 }

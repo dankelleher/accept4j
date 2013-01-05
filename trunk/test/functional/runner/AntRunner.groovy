@@ -8,6 +8,8 @@ import org.apache.tools.ant.ProjectHelper
  * Copyright: Daniel Kelleher Date: 11.11.12 Time: 19:27
  */
 class AntRunner implements Accept4jRunner {
+    String target = ""
+    
     void run() {
         /*
         def antFile = new File("$FunctionalTestFixture.STAGE_DIR/build.xml")
@@ -32,10 +34,10 @@ class AntRunner implements Accept4jRunner {
 
         new AntBuilder().copy(file: "testData/functional/antTestBuild.xml", tofile: "${FunctionalTestFixture.STAGE_DIR}/build.xml");
 
-        String[] arguments = ["java", "-classpath", "$antHome/lib/ant-launcher.jar", "org.apache.tools.ant.launch.Launcher"]
-
-        Process proc = Runtime.getRuntime().exec(arguments, null, new File(FunctionalTestFixture.STAGE_DIR));
-        System.err << proc.errorStream
-
+        String command = "java -classpath $antHome/lib/ant-launcher.jar org.apache.tools.ant.launch.Launcher $target"
+        
+        def process = command.execute(null, new File(FunctionalTestFixture.STAGE_DIR))
+        process.consumeProcessOutput(System.out, System.err)
+        process.waitFor()
     }
 }

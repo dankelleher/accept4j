@@ -14,24 +14,33 @@ import groovy.util.logging.Log4j
  */
 @Log4j
 class SpecGeneratorFactory {
+    ServiceLoader<SpecGenerator> serviceLoader
     SpecGenerator extensionGenerator
     def rules
 
     public SpecGeneratorFactory() {
+        this(createServiceLoader())
+    }
+
+    public SpecGeneratorFactory(ServiceLoader<SpecGenerator> serviceLoader) {
+        this.serviceLoader = serviceLoader
         findExtension()
         setUpRules()
     }
 
     private void findExtension() {
-        def cl = getClass().classLoader
-        ServiceLoader<SpecGenerator> serviceLoader = ServiceLoader.load(SpecGenerator, cl)
-
         def iterator = serviceLoader.iterator()
         if (iterator.hasNext()) extensionGenerator = iterator.next()
 
         if (extensionGenerator != null) {
             log.info "Found spec generator: ${extensionGenerator.class.simpleName}"
         }
+    }
+
+    private static ServiceLoader<SpecGenerator> createServiceLoader() {
+        def cl = SpecGeneratorFactory.classLoader
+        ServiceLoader<SpecGenerator> serviceLoader = ServiceLoader.load(SpecGenerator, cl)
+        return serviceLoader
     }
 
     private setUpRules() {

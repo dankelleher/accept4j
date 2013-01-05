@@ -28,7 +28,7 @@ class AnnotationVisitorUnitTest {
 
         visitor.visitExecutableAsMethod(dummyElement, suite)
         
-        assert suite.groups.iterator()[0].testPacks.iterator()[0].find("a test") != null
+        assert suite.groups.iterator()[0].testPacks.iterator()[0].find(id: "a test") != null
     }
     
     private ExecutableElement getExecutableElement() {

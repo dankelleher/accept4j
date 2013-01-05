@@ -153,6 +153,17 @@ class AcceptanceTestSuiteUnitTest {
 
         assert suite.groups*.testPacks*.tests*.id.flatten() == ["1.1", "1.3", "1.2", "1.4"] // 1.1 and 1.3 are in the same pack
     }
+    
+    @Test void testLoadFromXML() {
+        def test = new AcceptanceTestItem(id:"1.1", methodName:"TestMethod")
+        AcceptanceTestSuite outputSuite = makeSuite(test)
+        new File("spec.xml").withWriter { it << outputSuite.toXML() }
+        
+        suite = AcceptanceTestSuite.loadFromXML("spec.xml")
+
+        assert suite.groups*.testPacks*.tests*.id.flatten() == ["1.1"]
+        assert suite.groups*.testPacks*.tests*.methodName.flatten() == ["TestMethod"]
+    }
 
     @After void tearDown() {
         new File("spec.xml").delete()

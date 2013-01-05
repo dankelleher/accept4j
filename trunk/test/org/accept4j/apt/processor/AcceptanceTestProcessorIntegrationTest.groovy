@@ -11,14 +11,9 @@ import javax.lang.model.element.Element
 import org.accept4j.annotation.TestPack
 import org.mockito.stubbing.Answer
 import org.accept4j.annotation.AcceptanceTest
-import javax.xml.xpath.XPathConstants
-import javax.xml.xpath.XPathFactory
+
 import javax.lang.model.element.Name
-import org.junit.AfterClass
-import org.accept4j.testpack.AcceptanceTestSuite
-import org.accept4j.testpack.AcceptanceTestPackGroup
-import org.accept4j.testpack.AcceptanceTestPack
-import org.accept4j.testpack.AcceptanceTestItem
+
 import groovy.xml.MarkupBuilder
 import org.junit.After
 
@@ -80,7 +75,7 @@ class AcceptanceTestProcessorIntegrationTest {
     void testProcessorGeneratesXML() {
         processor.generateXML(testSet, roundEnv)
 
-        def suite = new XmlSlurper().parse new File("${AcceptanceTestProcessor.PATH}/test.xml")
+        def suite = new XmlSlurper().parse new File(AcceptanceTestProcessor.XML_FILE)
         assert suite.group.pack.test.'@id' == "1.1"
         assert suite.group.pack.test.'@methodName' == "TestMethod"
         assert suite.group.pack.'@name' == "dummy pack"
@@ -88,7 +83,7 @@ class AcceptanceTestProcessorIntegrationTest {
     }
 
     @Test void testHTMLGeneratedFromXML() {
-        new File("${AcceptanceTestProcessor.PATH}/test.xml").withWriter { writer ->
+        new File(AcceptanceTestProcessor.XML_FILE).withWriter { writer ->
             def spec = new MarkupBuilder(writer)
             spec.suite {
                 group(name: "dummy group") {
@@ -99,9 +94,9 @@ class AcceptanceTestProcessorIntegrationTest {
             }
         }
 
-        processor.convertToHTML()
+        SpecFormatConverter.convertToHTML()
 
-        def html = new File("${AcceptanceTestProcessor.PATH}/test.html").text
+        def html = new File(AcceptanceTestProcessor.HTML_FILE).text
         assert html =~ /1.1/
         assert html =~ /test method/
     }

@@ -16,18 +16,14 @@ class AcceptanceTestPack implements Comparable<AcceptanceTestPack> {
         return this
     }
     
-    public AcceptanceTestItem find(String id) {
-        return tests.find { it.id == id }
+    public AcceptanceTestItem find(Map args) {
+        return tests.find { it.matches(args) }
     }
 
     protected void toXML(def builder) {
         builder.pack(name:name) {
             tests.each { it.toXML(builder)}
         }
-    }
-
-    private AcceptanceTestItem findTestById(testId) {
-        tests.find { it.id == testId }
     }
 
     @Override
