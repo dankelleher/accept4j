@@ -3,6 +3,8 @@ package org.exampleprog.test;
 import org.accept4j.annotation.*;
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * Created by IntelliJ IDEA.
  * User: Daniel
@@ -16,11 +18,12 @@ public class WhenMakingAnOrder {
     @AcceptanceTest(id="TST-48730")
     @Test
     public void testTheClientShouldBeBilled() {
-        System.out.println("hello world");
+        assertTrue(true);
     }
 
     @AcceptanceTest(id="TST-48731")
+    @Test
     public void testTheStockShouldBeReduced() {
-
+        assertTrue(true);
     }
 }

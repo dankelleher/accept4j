@@ -14,9 +14,10 @@ class JavacRunner implements Accept4jRunner {
     }
 
     void run() {
-        String[] arguments = ["javac", "-d", "out", "-classpath", "$classpath;${FunctionalTestFixture.ROOT_DIR}/lib/junit-4.10.jar", "src/org/exampleprog/test/*.java"]
+        String command = "javac -d out -classpath $classpath;${FunctionalTestFixture.ROOT_DIR}/lib/junit-4.10.jar src/org/exampleprog/test/*.java"
 
-        Process proc = Runtime.getRuntime().exec(arguments, null, new File(FunctionalTestFixture.STAGE_DIR));
-        System.err << proc.errorStream
+        def process = command.execute(null, new File(FunctionalTestFixture.STAGE_DIR))
+        process.consumeProcessOutput(System.out, System.err)
+        process.waitFor()
     }
 }

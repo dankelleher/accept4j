@@ -52,35 +52,57 @@
     </xsl:template>
 
     <xsl:template match="test">
-        <tr>
-            <td class="iconCol">
-                <xsl:choose>
-                    <xsl:when test="@name = ''">
-                        <img src="resources/alert.png" title="This test has no matching specification" class="icon"/>
-                    </xsl:when>
-                    <xsl:when test="@methodName != ''">
-                        <img src="resources/green.png" title="A test exists for this specification" class="icon"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <img src="resources/red.png" title="No test exists for this specification" class="icon"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </td>
-            <td class="idCol">
-                <xsl:value-of select="@id"/>
-            </td>
-            <td class="nameCol">
-                <xsl:value-of select="@name"/>
-            </td>
-            <td class="methodNameCol">
-                <xsl:value-of select="@methodName"/>
-            </td>
-            <td class="descCol">
-                <pre>
-                    <xsl:value-of select="description"/>
-                </pre>
-            </td>
-        </tr>
+        <xsl:choose>
+            <xsl:when test="executionData/status = 'PASS'">
+                <tr class="testPass">
+                    <xsl:call-template name="testRow"/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="executionData/status = 'FAIL'">
+                <tr class="testFail">
+                    <xsl:call-template name="testRow"/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="executionData/status = 'ERROR'">
+                <tr class="testError">
+                    <xsl:call-template name="testRow"/>
+                </tr>
+            </xsl:when>
+            <xsl:otherwise>
+                <tr>
+                    <xsl:call-template name="testRow"/>
+                </tr>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
+    <xsl:template name="testRow">
+        <td class="iconCol">
+            <xsl:choose>
+                <xsl:when test="@name = ''">
+                    <img src="resources/alert.png" title="This test has no matching specification" class="icon"/>
+                </xsl:when>
+                <xsl:when test="@methodName != ''">
+                    <img src="resources/green.png" title="A test exists for this specification" class="icon"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <img src="resources/red.png" title="No test exists for this specification" class="icon"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </td>
+        <td class="idCol">
+            <xsl:value-of select="@id"/>
+        </td>
+        <td class="nameCol">
+            <xsl:value-of select="@name"/>
+        </td>
+        <td class="methodNameCol">
+            <xsl:value-of select="@methodName"/>
+        </td>
+        <td class="descCol">
+            <pre>
+                <xsl:value-of select="description"/>
+            </pre>
+        </td>
+    </xsl:template>
 </xsl:stylesheet>

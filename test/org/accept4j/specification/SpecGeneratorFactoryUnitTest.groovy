@@ -4,6 +4,9 @@ import org.junit.Test
 import org.accept4j.specification.generator.ExcelSpecGenerator
 import org.junit.After
 import org.junit.Before
+import static org.mockito.Mockito.mock
+import static org.mockito.Mockito.when
+import org.accept4j.specification.generator.SpecGenerator
 
 /**
  * Copyright: Daniel Kelleher Date: 01.10.12 Time: 20:53
@@ -22,7 +25,7 @@ class SpecGeneratorFactoryUnitTest extends GroovyTestCase {
     }
 
     @Test
-    void testProduceCorrectFactory() {
+    void testProduceCorrectGenerator() {
         // no spec files
         shouldFail {
             factory.generator
@@ -35,6 +38,18 @@ class SpecGeneratorFactoryUnitTest extends GroovyTestCase {
         specFiles.xml.createNewFile()
 
         assert !(factory.generator instanceof ExcelSpecGenerator)
+    }
+    
+    @Test testFindExtensionGenerator() {
+        def stubExtensionGenerator = mock SpecGenerator
+        def stubServiceLoader = mock ServiceLoader
+        def generatorIt = [stubExtensionGenerator].iterator()
+        
+        when stubServiceLoader.iterator() thenReturn generatorIt
+        
+        factory = new SpecGeneratorFactory(stubServiceLoader)
+        
+        assert factory.generator == stubExtensionGenerator
     }
     
     @After void tearDown() {

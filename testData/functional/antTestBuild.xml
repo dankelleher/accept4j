@@ -14,5 +14,24 @@
                destdir="out"
                classpathref="class.path"/>
     </target>
+
+
+    <target name="test">
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath refid="class.path"/>
+            <classpath>
+                <pathelement location="out"/>
+            </classpath>
+
+            <formatter classname="org.accept4j.execution.listener.AntJUnitTestListener"/>
+            <formatter type="plain"/>
+
+            <batchtest fork="yes" todir="reports">
+                <fileset dir="src">
+                    <include name="**/test/*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
 </project>  
   

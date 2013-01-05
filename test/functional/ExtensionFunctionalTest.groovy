@@ -3,7 +3,7 @@ package functional
 /**
  * Copyright: Daniel Kelleher Date: 13.12.12 Time: 11:46
  */
-class ExtensionFunctionalTest extends FunctionalTestFixture {
+class ExtensionFunctionalTest extends SpecGenerationFunctionalTestFixture {
     public ExtensionFunctionalTest() {
         super("extension");
     }
