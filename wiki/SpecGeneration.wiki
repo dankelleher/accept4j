@@ -8,6 +8,7 @@ Accept4j takes a set of specifications, or test cases, from the business, and pr
   * [SpecGeneration#Directory_structure Directory structure]
   * [SpecGeneration#JIRA Atlassian JIRA issue tracking software]
   * [SpecGeneration#XML XML file]
+  * [CustomSpecGenerator A custom specification generator]
 
 ----
 
