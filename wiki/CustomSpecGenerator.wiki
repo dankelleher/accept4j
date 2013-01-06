@@ -1,0 +1,12 @@
+#summary How to write your own spec generation implementations
+
+= Introduction =
+
+If you do not like any of the built-in spec generators, this page will show you how to write your own.
+
+
+= Details =
+
+== 1. Writing the generator ==
+
+Implement the org.accept4j.specification.generator.SpecGenerator interface. For an example, check out the code at [http://code.google.com/p/accept4j/source/browse/trunk/ext/Accept4JExtension/src/org/accept4j/ext/specification/generator/text/TextSpecGenerator.groovy]
