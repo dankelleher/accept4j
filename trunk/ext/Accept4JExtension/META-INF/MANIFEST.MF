@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Class-Path: accept4j.jar accept4j.jar abeilleformbuilder-3.0.jar ant-1
+ .8.2.jar ant-antlr-1.8.2.jar ant-junit-1.8.2.jar ant-launcher-1.8.2.j
+ ar antlr-2.7.7.jar asm-3.2.jar asm-analysis-3.2.jar asm-commons-3.2.j
+ ar asm-tree-3.2.jar asm-util-3.2.jar balloontip-20090102.jar batik-an
+ im-1.7.jar batik-awt-util-1.7.jar batik-bridge-1.7.jar batik-codec-1.
+ 7.jar batik-css-1.7.jar batik-dom-1.7.jar batik-ext-1.7.jar batik-ext
+ ension-1.7.jar batik-gui-util-1.7.jar batik-gvt-1.7.jar batik-parser-
+ 1.7.jar batik-script-1.7.jar batik-svg-dom-1.7.jar batik-svggen-1.7.j
+ ar batik-swing-1.7.jar batik-transcoder-1.7.jar batik-util-1.7.jar ba
+ tik-xml-1.7.jar bsf-2.4.0.jar commons-cli-1.2.jar commons-logging-1.1
+ .1.jar cssbuilder-0.6.jar cssparser-0.9.5.jar easyb-0.9.8.jar extra16
+ 6y-1.7.0.jar flamingo-4.1.jar flamingobuilder-0.5.jar forms-1.2.1.jar
+  formsrt-2.1.0M1.jar gant-1.9.7_groovy-1.8.4.jar gfxbuilder-core-0.6.
+ jar gfxbuilder-svg-0.6.jar gfxbuilder-swingx-0.6.jar gmock-0.8.2.jar 
+ gpars-0.12.jar groovy-1.8.6.jar groovyserv-0.9.jar hamcrest-core-1.1.
+ jar ivy-2.2.0.jar jacob-1.14.3.jar jansi-1.7.jar jcsp-1.1-rc5.jar jid
+ e-oss-2.10.2.jar jidebuilder-5.0.jar jline-0.9.94.jar jna-3.2.2.jar j
+ silhouette-geom-0.4.jar jsp-api-2.0.jar jsr166y-1.7.0.jar junit-4.10.
+ jar l2fprod-common-all-6.9.1.jar macwidgetsbuilder-0.5.jar mac_widget
+ s-0.9.5.jar multiverse-beta-0.7-RC-1.jar netty-3.2.7.Final.jar sac-1.
+ 3.jar scriptom-1.6.0.jar scriptom-ie-6-tlb-1.6.0.jar scriptom-office-
+ 2K3-tlb-1.6.0.jar scriptom-sapi-tlb-1.6.0.jar scriptom-scripting-tlb-
+ 1.6.0.jar scriptom-wbem-tlb-1.6.0.jar scriptom-wsh-tlb-1.6.0.jar serv
+ let-api-2.4.jar spock-core-0.6-groovy-1.8-SNAPSHOT.jar svg-salamander
+ -1.1.jar swing-worker-1.1.jar swingx-action-1.6.3.jar swingx-autocomp
+ lete-1.6.3.jar swingx-beaninfo-1.6.3.jar swingx-common-1.6.3.jar swin
+ gx-core-1.6.3.jar swingx-graphics-1.6.3.jar swingx-painters-1.6.3.jar
+  swingx-plaf-1.6.3.jar swingxbuilder-0.2.jar swingxtrasbuilder-0.4.ja
+ r timingframework-1.0.jar trident-7.0.jar tridentbuilder-0.6.jar xml-
+ apis-ext-1.3.04.jar xmlpull-1.1.3.1.jar xstream-1.4.1.jar xswingx-0.2
+ .jar
+

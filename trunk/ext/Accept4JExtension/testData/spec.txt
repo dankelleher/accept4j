@@ -1,0 +1,18 @@
+suite:suite
+group:dummy group
+pack:dummy pack
+id:1.1
+name:TestMethod
+id:1.2
+name:Test Something Else
+description:This is an unreasonably long description, used to stretch the capabilities of our stylesheets and ensure everything still looks pretty, even when an over-zealous BA puts a small essay in the description field. They may, for example, try to be clever, by
+         -1. Entering a list
+         -2. Expecting their text formatting to be retained in the HTML
+         -3. Putting in dodgy characters like <
+        We need to make sure everything still looks reasonably pretty in these circumstances. Probably with a CDATA tag or something
+id:1.3
+name:Some Missing Test
+id:2.1
+name:Test Something
+id:2.2
+name:Test Something Else

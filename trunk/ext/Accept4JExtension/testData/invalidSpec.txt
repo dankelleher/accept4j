@@ -1,0 +1,17 @@
+suite:suite
+group:a group
+pack:a pack
+id:1.1
+name:A Test
+description:This description
+has 
+line breaks
+which is fine
+id:1.2
+name:A Test name
+with line breaks is not
+fine
+description:This description
+has 
+line breaks
+which is fine
