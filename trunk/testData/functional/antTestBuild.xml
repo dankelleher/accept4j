@@ -17,7 +17,7 @@
 
 
     <target name="test">
-        <junit printsummary="yes" haltonfailure="yes">
+        <junit printsummary="yes">
             <classpath refid="class.path"/>
             <classpath>
                 <pathelement location="out"/>

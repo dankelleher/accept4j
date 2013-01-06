@@ -26,6 +26,7 @@ class AcceptanceTestItem implements Comparable<AcceptanceTestItem> {
         description = testXML.description.text()
 
         if (testXML.@methodName != "") methodName = testXML.@methodName.text()
+        if (testXML.executionData != "") executionData = ExecutionData.buildFromXML(testXML.executionData)
     }
 
     @Override

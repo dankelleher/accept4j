@@ -22,6 +22,10 @@ class AntJUnitTestListener implements JUnitResultFormatter {
         this.executor = executor
     }
 
+    void startTestSuite(JUnitTest jUnitTest) {
+        executor.start()
+    }
+
     void endTestSuite(JUnitTest jUnitTest) {
         executor.complete()
     }
@@ -34,7 +38,7 @@ class AntJUnitTestListener implements JUnitResultFormatter {
         sendEvent(test, ExecutionData.Status.FAIL)
     }
 
-    void endTest(Test test) {
+    void startTest(Test test) {
         sendEvent(test, ExecutionData.Status.PASS)
     }
 
@@ -43,8 +47,7 @@ class AntJUnitTestListener implements JUnitResultFormatter {
         executor.testRunEvent(name, new ExecutionData(status: status))
     }
 
-    void startTestSuite(JUnitTest jUnitTest) {}
-    void startTest(Test test) {}
+    void endTest(Test test) {}
     void setOutput(OutputStream outputStream) {}
     void setSystemOutput(String s) {}
     void setSystemError(String s) {}
