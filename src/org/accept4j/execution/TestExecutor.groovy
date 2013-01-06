@@ -7,5 +7,6 @@ import org.accept4j.testpack.ExecutionData
  */
 public interface TestExecutor {
     void testRunEvent(String testName, ExecutionData executionData)
+    void start()
     void complete()
 }

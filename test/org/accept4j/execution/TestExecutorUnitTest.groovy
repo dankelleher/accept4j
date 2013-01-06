@@ -21,7 +21,7 @@ class TestExecutorUnitTest {
     @Before void setUp() {
         new File(AcceptanceTestProcessor.PATH).mkdir()
 
-        executor = new TestExecutorImpl(new AcceptanceTestSuite())
+        executor = new TestExecutorImpl(suite: new AcceptanceTestSuite())
         pack.add(SAMPLE_TEST)
     }
     
@@ -38,7 +38,6 @@ class TestExecutorUnitTest {
     }
 
     private TestExecutorImpl makeExecutorFromXML() {
-        TestExecutorImpl executor
         new File(AcceptanceTestProcessor.XML_FILE).withWriter { writer ->
             def spec = new MarkupBuilder(writer)
             spec.suite {
@@ -50,7 +49,8 @@ class TestExecutorUnitTest {
             }
         }
 
-        executor = new TestExecutorImpl()
+        TestExecutor executor = new TestExecutorImpl()
+        executor.start()
         return executor
     }
 

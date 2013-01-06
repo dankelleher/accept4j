@@ -7,6 +7,7 @@ import org.junit.After
 import static org.accept4j.testpack.AcceptanceTestUnitUtils.makePackWithTests
 import static org.accept4j.testpack.AcceptanceTestUnitUtils.makePackWithTests
 import static org.accept4j.testpack.AcceptanceTestUnitUtils.makePackWithTests
+import org.junit.runners.Suite
 
 /**
  * Copyright: Daniel Kelleher Date: 23.09.12 Time: 21:45
@@ -155,7 +156,7 @@ class AcceptanceTestSuiteUnitTest {
     }
     
     @Test void testLoadFromXML() {
-        def test = new AcceptanceTestItem(id:"1.1", methodName:"TestMethod")
+        def test = new AcceptanceTestItem(id:"1.1", methodName:"TestMethod", executionData: new ExecutionData(status: ExecutionData.Status.PASS))
         AcceptanceTestSuite outputSuite = makeSuite(test)
         new File("spec.xml").withWriter { it << outputSuite.toXML() }
         
@@ -163,6 +164,7 @@ class AcceptanceTestSuiteUnitTest {
 
         assert suite.groups*.testPacks*.tests*.id.flatten() == ["1.1"]
         assert suite.groups*.testPacks*.tests*.methodName.flatten() == ["TestMethod"]
+        assert suite.groups*.testPacks*.tests*.executionData.status.flatten() == [ExecutionData.Status.PASS]
     }
 
     @After void tearDown() {

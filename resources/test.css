@@ -96,3 +96,11 @@ td.descCol pre {
 .testDetailsTable tr:nth-child(odd) {
     background-color:#fafaff;
 }
+
+tr.testFail td {
+    background-color:#ffbebe;
+}
+
+tr.testError td {
+    background-color:#ffbebe;
+}

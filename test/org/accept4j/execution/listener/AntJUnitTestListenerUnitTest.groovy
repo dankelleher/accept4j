@@ -33,7 +33,7 @@ class AntJUnitTestListenerUnitTest {
     }
     
     @Test void aPassingTestShouldSendAPassToTheExecutor() {
-        listener.endTest(stubTest)
+        listener.startTest(stubTest)
 
         verify(mockExecutor).testRunEvent(DUMMY_TEST_NAME, new ExecutionData(status: ExecutionData.Status.PASS))
     }
