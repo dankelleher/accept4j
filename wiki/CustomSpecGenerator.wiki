@@ -11,7 +11,7 @@ If you do not like any of the built-in spec generators, this page will show you 
 
 Implement the `org.accept4j.specification.generator.SpecGenerator` interface.
 
-The purpose of this class is to generate an `AcceptanceTestSuite` object and then to write this to `test.xml` using the `toXML()` method.
+The purpose of this class is to generate an `AcceptanceTestSuite` object and then to write this to `spec.xml` using the `toXML()` method.
 
 For an example, check out the code at [http://code.google.com/p/accept4j/source/browse/trunk/ext/Accept4JExtension/].
 
